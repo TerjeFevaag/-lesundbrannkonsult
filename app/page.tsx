@@ -1,65 +1,260 @@
-import Image from "next/image";
+import Image from 'next/image'
+import Link from 'next/link'
+import { CheckCircle } from 'lucide-react'
+import ScrollReveal from '@/components/ScrollReveal'
+import FAQAccordion from '@/components/FAQAccordion'
+import ReviewCard from '@/components/ReviewCard'
+import ServiceCard from '@/components/ServiceCard'
 
-export default function Home() {
+const services = [
+  {
+    iconImage: '/images/icon-brannkonsept.gif',
+    title: 'Brannkonsept',
+    description: 'Kommunen krever et brannkonsept ved de fleste byggesaker. Vi utarbeider helhetlige brannkonsept som ivaretar brannsikkerheten i ditt prosjekt.',
+    href: '/brannkonsept',
+  },
+  {
+    iconImage: '/images/icon-brannprosjektering.gif',
+    title: 'Brannprosjektering',
+    description: 'Vi sørger for at bygget ditt oppfyller alle krav til brannsikkerhet, og finner praktiske løsninger som sparer både tid og kostnader. Fast pris der det er mulig.',
+    href: '/brannprosjektering',
+  },
+  {
+    iconImage: '/images/icon-branntilsyn.png',
+    title: 'Branntilsyn',
+    description: 'Har du fått pålegg etter branntilsyn? Vi inspiserer hele bygningen og utarbeider tilstandsrapport og handlingsplan.',
+    href: '/branntilsyn',
+  },
+  {
+    iconImage: '/images/icon-uavhengig-kontroll.png',
+    title: 'Uavhengig kontroll',
+    description: 'I mange byggeprosjekter er det krav om uavhengig kontroll av brannsikkerheten. Vi gjennomfører kontrollen og utsteder erklæring om ansvarsrett.',
+    href: '/uavhengig-kontroll',
+  },
+]
+
+const reviews = [
+  {
+    quote: 'Raskt svar, relevant og grundig rapport, kommunen likte måten det var gjort på. Alt til bra priser.',
+    author: 'Vegard Hals',
+  },
+  {
+    quote: 'Brannkonsult AS er faglig dyktige, ryddige og løsningsorienterte. Det er viktig for oss som arkitekter og for våre kunder.',
+    author: 'Jon Cederbrand Arkitektur AS',
+  },
+  {
+    quote: 'Ålesund Brannkonsult er lette å samarbeide med, de svarer raskt, finner gode løsninger og leverer arbeid av jevnt høy kvalitet.',
+    author: 'Hagelin Byggservice',
+    company: 'Daniel Hagelin',
+  },
+  {
+    quote: 'Ga rask tilbakemelding ved første kontakt. Leverte til avtalt tid og pris. Høy kvalitet på arbeidet. Veldig behjelpelig med å svare på spørsmål i ettertid, vederlagsfritt.',
+    author: 'Jonathan Steinsvik',
+  },
+]
+
+const faqItems = [
+  {
+    question: 'Hva koster brannprosjektering i Ålesund?',
+    answer: 'Et brannkonsept i tiltaksklasse 2 starter fra ca. 15 000 kr ekskl. mva. Vi tilbyr alltid fastpris.',
+  },
+  {
+    question: 'Trenger jeg brannprosjektering for mitt prosjekt?',
+    answer: 'De fleste byggesaker krever brannprosjektering — tilbygg, bruksendring, ny boenhet, påbygg. Ta kontakt for en gratis vurdering.',
+  },
+  {
+    question: 'Er befaring nødvendig?',
+    answer: 'For nybygg og enklere saker er det ofte ikke nødvendig. Digitale tegninger og kartdata er som regel tilstrekkelig.',
+  },
+  {
+    question: 'Er dere sentralt godkjent?',
+    answer: 'Ja, vi har sentral godkjenning for brannprosjektering i tiltaksklasse 1 og 2 fra DiBK.',
+  },
+  {
+    question: 'Tar dere oppdrag utenfor Ålesund?',
+    answer: 'Vi hjelper kunder i Ålesund, Sunnmøre og hele landet. Kontakt oss uansett hvor i Norge prosjektet ditt er.',
+  },
+  {
+    question: 'Hva trenger dere for å gi pristilbud?',
+    answer: 'Adresse, plantegninger og en kort prosjektbeskrivelse. Vi svarer med fastpris innen 24 timer.',
+  },
+]
+
+export default function HomePage() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
+    <>
+      {/* ── Hero — city image with card anchored to bottom ── */}
+      <section className="relative h-[85vh] min-h-[500px] overflow-hidden">
         <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
+          src="/images/hero.jpg"
+          alt="Ålesund by"
+          fill
+          className="object-cover"
+          sizes="100vw"
           priority
         />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+        <div className="absolute inset-0 bg-gradient-to-t from-brand-black/70 via-brand-black/30 to-transparent" />
+        {/* Floating card anchored to bottom */}
+        <div className="absolute bottom-8 left-4 right-4 sm:left-8 sm:right-8 lg:left-auto lg:right-8 lg:w-[560px]">
+          <div className="bg-brand-black/80 backdrop-blur-sm rounded-[30px] p-8 lg:p-10">
+            <p className="hero-1 font-accent text-brand-orange text-xl mb-3">Ålesund Brannkonsult</p>
+            <h1 className="hero-2 text-brand-white font-black text-3xl lg:text-4xl xl:text-5xl leading-tight mb-5">
+              Brannprosjektering i Ålesund
+            </h1>
+            <p className="hero-3 text-brand-white/70 text-base lg:text-lg leading-relaxed mb-7">
+              Vi hjelper deg med brannkonsept, brannprosjektering og branntilsyn i Ålesund og på Sunnmøre. Sentralt godkjent. Fastpris.
+            </p>
+            <div className="hero-4 flex flex-col sm:flex-row gap-3">
+              <Link href="/kontakt-oss" className="bg-brand-orange text-brand-white font-bold px-8 py-3.5 rounded-[10px] hover:opacity-90 transition-opacity text-center">
+                Få gratis tilbud
+              </Link>
+              <Link href="/brannprosjektering" className="border-2 border-brand-white/30 text-brand-white font-bold px-8 py-3.5 rounded-[10px] hover:border-brand-white/60 transition-colors text-center">
+                Tjenestene
+              </Link>
+            </div>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </section>
+
+      {/* ── Services — magazine: 1 large + 3 small ── */}
+      <section className="py-16 lg:py-24 bg-brand-white">
+        <div className="max-w-[1350px] mx-auto px-4 sm:px-6 lg:px-8">
+          <ScrollReveal className="mb-12">
+            <h2 className="text-brand-black text-3xl lg:text-4xl font-black mb-2">Våre tjenester</h2>
+            <p className="text-brand-darkgray text-lg">Brannprosjektering tilpasset Ålesund og Sunnmøre.</p>
+          </ScrollReveal>
+          {/* Large featured + 3 small */}
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            <ScrollReveal className="lg:col-span-2">
+              <ServiceCard {...services[0]} />
+            </ScrollReveal>
+            <div className="flex flex-col gap-6">
+              {services.slice(1).map((service, i) => (
+                <ScrollReveal key={service.href} delay={i * 60} className="flex-1">
+                  <ServiceCard {...service} />
+                </ScrollReveal>
+              ))}
+            </div>
+          </div>
         </div>
-      </main>
-    </div>
-  );
+      </section>
+
+      {/* ── About — timeline ── */}
+      <section className="py-16 lg:py-24 bg-brand-lightgray">
+        <div className="max-w-[1350px] mx-auto px-4 sm:px-6 lg:px-8">
+          <ScrollReveal className="mb-12">
+            <h2 className="text-brand-black text-3xl lg:text-4xl font-black mb-4">Vår historie</h2>
+            <p className="text-brand-darkgray text-lg leading-relaxed max-w-2xl">
+              Ålesund er kjent for sin unike jugendstil-arkitektur, og mange av byens eldre bygninger stiller særskilte krav til brannteknisk vurdering. Vi kjenner godt til utfordringene knyttet til brann og eldre bebyggelse på Sunnmøre.
+            </p>
+          </ScrollReveal>
+
+          <div className="relative">
+            {/* Vertical line */}
+            <div className="absolute left-6 top-0 bottom-0 w-0.5 bg-brand-orange/30 hidden md:block" />
+            <div className="space-y-8">
+              {[
+                { year: '2013', title: 'Etablert', desc: 'Brannkonsult AS ble etablert med mål om å tilby nøytral og faglig brannprosjektering.' },
+                { year: '2016', title: '500+ prosjekter', desc: 'Vi passerte 500 gjennomførte prosjekter og utvidet teamet med flere brannrådgivere.' },
+                { year: '2020', title: '1000+ prosjekter', desc: 'Over tusen byggesaker gjennomført — fra enkle tilbygg til store næringsbygg.' },
+                { year: 'I dag', title: 'Sentralt godkjent TKL 1+2', desc: '1 200+ prosjekter. Sentralt godkjent fra DiBK. Tar oppdrag i Ålesund, Sunnmøre og hele landet.' },
+              ].map((item, i) => (
+                <ScrollReveal key={i} delay={i * 80}>
+                  <div className="flex gap-8 items-start">
+                    <div className="shrink-0 w-12 h-12 rounded-full bg-brand-orange flex items-center justify-center text-brand-white font-black text-xs text-center leading-tight z-10">{item.year}</div>
+                    <div className="bg-brand-white rounded-[20px] p-6 border border-brand-gray flex-1">
+                      <h3 className="font-black text-brand-black text-lg mb-2">{item.title}</h3>
+                      <p className="text-brand-darkgray">{item.desc}</p>
+                    </div>
+                  </div>
+                </ScrollReveal>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Reviews — 2-column grid ── */}
+      <section className="py-16 lg:py-24 bg-brand-white">
+        <div className="max-w-[1350px] mx-auto px-4 sm:px-6 lg:px-8">
+          <ScrollReveal className="mb-12">
+            <h2 className="text-brand-black text-3xl lg:text-4xl font-black">Hva kundene sier</h2>
+          </ScrollReveal>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {reviews.map((review, i) => (
+              <ScrollReveal key={i} delay={i * 70}>
+                <ReviewCard {...review} />
+              </ScrollReveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── FAQ — 2-column on desktop ── */}
+      <section className="py-16 lg:py-24 bg-brand-lightgray">
+        <div className="max-w-[1350px] mx-auto px-4 sm:px-6 lg:px-8">
+          <ScrollReveal className="mb-12">
+            <h2 className="text-brand-black text-3xl lg:text-4xl font-black mb-4 text-center">Ofte stilte spørsmål</h2>
+            <p className="text-brand-darkgray text-lg text-center max-w-xl mx-auto">
+              Vanlige spørsmål om brannprosjektering i Ålesund og på Sunnmøre.
+            </p>
+          </ScrollReveal>
+          <ScrollReveal delay={80} variant="fade">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+              <div className="bg-brand-white rounded-[30px] p-8 border border-brand-gray">
+                <FAQAccordion items={faqItems.slice(0, 3)} />
+              </div>
+              <div className="bg-brand-white rounded-[30px] p-8 border border-brand-gray">
+                <FAQAccordion items={faqItems.slice(3)} />
+              </div>
+            </div>
+          </ScrollReveal>
+        </div>
+      </section>
+
+      {/* ── Articles — 3 equal columns ── */}
+      <section className="py-16 lg:py-24 bg-brand-white">
+        <div className="max-w-[1350px] mx-auto px-4 sm:px-6 lg:px-8">
+          <ScrollReveal className="mb-10">
+            <h2 className="text-brand-black text-3xl lg:text-4xl font-black mb-2">Artikler og tips</h2>
+          </ScrollReveal>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {[
+              { href: '/artikler/pipebrann', img: '/images/article-pipebrann.jpg', title: 'Forebygg pipebrann med enkle grep', excerpt: 'Er du i faresonen for pipebrann? Vi forklarer hva som forårsaker den og hva du kan gjøre.' },
+              { href: '/artikler/brannslokker', img: '/images/article-brannslukker.jpg', title: 'Har du riktig brannslokkeapparat?', excerpt: 'Vet du hvilken type brannslokker du trenger? Vi gjennomgår kravene.' },
+              { href: '/artikler/roykvarsler', img: '/images/article-roykvarsler.jpg', title: 'Riktig røykvarsler redder liv', excerpt: 'Krav til røykvarslere og riktig plassering i norske boliger.' },
+            ].map((article, i) => (
+              <ScrollReveal key={article.href} delay={i * 80}>
+                <Link href={article.href} className="group flex flex-col rounded-[30px] overflow-hidden border border-brand-gray hover:shadow-lg transition-shadow duration-300 h-full">
+                  <div className="relative h-48 overflow-hidden">
+                    <Image src={article.img} alt={article.title} fill className="object-cover group-hover:scale-105 transition-transform duration-500" sizes="(max-width: 768px) 100vw, 33vw" />
+                  </div>
+                  <div className="p-6 flex flex-col flex-1">
+                    <h3 className="text-brand-black text-lg font-black mb-2 group-hover:text-brand-orange transition-colors">{article.title}</h3>
+                    <p className="text-brand-darkgray text-sm leading-relaxed flex-1 mb-4">{article.excerpt}</p>
+                    <span className="text-brand-orange font-bold text-sm">Les mer &rarr;</span>
+                  </div>
+                </Link>
+              </ScrollReveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── CTA — dark with texture gradient ── */}
+      <ScrollReveal variant="fade">
+        <section className="py-20 bg-brand-dark" style={{ backgroundImage: 'radial-gradient(ellipse at 70% 50%, rgba(245,126,35,0.08) 0%, transparent 60%)' }}>
+          <div className="max-w-[1350px] mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 className="text-brand-white text-3xl lg:text-4xl font-black mb-4">Klar for å komme i gang?</h2>
+            <p className="text-brand-white/60 text-lg mb-10 max-w-xl mx-auto">
+              Vi hjelper deg med brannprosjektering i Ålesund og på Sunnmøre. Svar innen 24 timer.
+            </p>
+            <Link href="/kontakt-oss" className="inline-block border-2 border-brand-orange text-brand-white font-bold px-10 py-4 rounded-[10px] hover:bg-brand-orange transition-all text-lg">
+              Kontakt oss
+            </Link>
+          </div>
+        </section>
+      </ScrollReveal>
+    </>
+  )
 }
