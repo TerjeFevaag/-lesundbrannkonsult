@@ -11,7 +11,6 @@ const navLinks = [
   { href: '/branntilsyn', label: 'Branntilsyn' },
   { href: '/uavhengig-kontroll', label: 'Uavhengig kontroll' },
   { href: '/om-oss', label: 'Om oss' },
-  { href: '/kontakt-oss', label: 'Kontakt oss' },
 ]
 
 export default function Navbar() {
@@ -25,26 +24,31 @@ export default function Navbar() {
   }, [])
 
   return (
-    <header className={`sticky top-0 z-50 transition-all duration-300 ${scrolled ? 'bg-brand-white shadow-md' : 'bg-brand-dark'}`}>
+    <header className={`sticky top-0 z-50 transition-all duration-300 ${scrolled ? 'bg-brand-white/95 backdrop-blur-sm shadow-md' : 'bg-brand-dark'}`}>
       <div className="max-w-[1350px] mx-auto px-4 sm:px-6 lg:px-8 h-20 lg:h-24 flex items-center justify-between">
         <Link href="/" className="shrink-0">
           <Image
             src={scrolled ? '/images/logo-black.png' : '/images/logo-white.png'}
-            alt="Ålesund Brannkonsult"
+            alt="Alesund Brannkonsult"
             width={234} height={65}
             className="object-contain h-[52px] w-auto"
             priority
           />
         </Link>
-        <nav className="hidden lg:flex items-center gap-6">
+        <nav className="hidden lg:flex items-center gap-1">
           {navLinks.map(link => (
             <Link key={link.href} href={link.href}
-              className={`text-sm font-bold transition-colors hover:text-brand-orange ${scrolled ? 'text-brand-black' : 'text-brand-white'}`}>
+              className={`px-3 py-2 rounded-[8px] text-sm font-medium transition-all ${
+                scrolled
+                  ? 'text-brand-black hover:text-brand-orange hover:bg-brand-lightgray'
+                  : 'text-brand-white/90 hover:text-brand-white hover:bg-brand-white/10'
+              }`}>
               {link.label}
             </Link>
           ))}
-          <Link href="/kontakt-oss" className="ml-2 bg-brand-orange text-brand-white font-bold px-5 py-2.5 rounded-[10px] hover:opacity-90 transition-opacity text-sm">
-            Få tilbud
+          <Link href="/kontakt-oss"
+            className="ml-4 bg-brand-orange text-brand-white font-bold px-6 py-2.5 rounded-full hover:opacity-90 transition-opacity text-sm">
+            Kontakt oss
           </Link>
         </nav>
         <button onClick={() => setOpen(!open)} className={`lg:hidden p-2 ${scrolled ? 'text-brand-black' : 'text-brand-white'}`} aria-label="Meny">
@@ -52,13 +56,19 @@ export default function Navbar() {
         </button>
       </div>
       {open && (
-        <div className="lg:hidden bg-brand-dark border-t border-brand-white/10 px-4 py-4">
+        <div className="lg:hidden bg-brand-white border-t border-brand-gray">
           {navLinks.map(link => (
             <Link key={link.href} href={link.href} onClick={() => setOpen(false)}
-              className="block py-3 text-brand-white font-bold hover:text-brand-orange transition-colors border-b border-brand-white/10 last:border-0">
+              className="block px-6 py-3.5 text-brand-black hover:text-brand-orange hover:bg-brand-lightgray font-medium transition-colors border-b border-brand-gray">
               {link.label}
             </Link>
           ))}
+          <div className="px-6 py-4">
+            <Link href="/kontakt-oss" onClick={() => setOpen(false)}
+              className="block bg-brand-orange text-brand-white font-bold px-5 py-3 rounded-full text-center hover:opacity-90 transition-opacity">
+              Kontakt oss
+            </Link>
+          </div>
         </div>
       )}
     </header>

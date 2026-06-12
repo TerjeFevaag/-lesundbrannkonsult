@@ -4,7 +4,6 @@ import { CheckCircle } from 'lucide-react'
 import ScrollReveal from '@/components/ScrollReveal'
 import FAQAccordion from '@/components/FAQAccordion'
 import ReviewCard from '@/components/ReviewCard'
-import ServiceCard from '@/components/ServiceCard'
 
 const services = [
   {
@@ -83,8 +82,8 @@ const faqItems = [
 export default function HomePage() {
   return (
     <>
-      {/* ── Hero — city image with card anchored to bottom ── */}
-      <section className="relative h-[85vh] min-h-[500px] overflow-hidden">
+      {/* ── Hero — city image with card anchored to bottom-right ── */}
+      <section className="relative h-[85vh] min-h-[500px] overflow-hidden -mt-20 lg:-mt-24">
         <Image
           src="/images/hero.jpg"
           alt="Ålesund by"
@@ -94,8 +93,8 @@ export default function HomePage() {
           priority
         />
         <div className="absolute inset-0 bg-gradient-to-t from-brand-black/70 via-brand-black/30 to-transparent" />
-        {/* Floating card anchored to bottom */}
-        <div className="absolute bottom-8 left-4 right-4 sm:left-8 sm:right-8 lg:left-auto lg:right-8 lg:w-[560px]">
+        {/* Floating card anchored to bottom-right */}
+        <div className="absolute bottom-8 left-4 right-4 sm:left-auto sm:right-8 sm:w-[480px] lg:right-8 lg:w-[560px]">
           <div className="bg-brand-black/80 backdrop-blur-sm rounded-[30px] p-8 lg:p-10">
             <p className="hero-1 font-accent text-brand-orange text-xl mb-3">Ålesund Brannkonsult</p>
             <h1 className="hero-2 text-brand-white font-black text-3xl lg:text-4xl xl:text-5xl leading-tight mb-5">
@@ -123,15 +122,37 @@ export default function HomePage() {
             <h2 className="text-brand-black text-3xl lg:text-4xl font-black mb-2">Våre tjenester</h2>
             <p className="text-brand-darkgray text-lg">Brannprosjektering tilpasset Ålesund og Sunnmøre.</p>
           </ScrollReveal>
-          {/* Large featured + 3 small */}
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            {/* Large featured card */}
             <ScrollReveal className="lg:col-span-2">
-              <ServiceCard {...services[0]} />
+              <Link href={services[0].href} className="group h-full flex flex-col sm:flex-row rounded-[30px] border border-brand-gray hover:shadow-lg hover:border-brand-orange/30 transition-all duration-300 bg-brand-white overflow-hidden">
+                <div className="sm:w-[38%] bg-brand-lightgray flex items-center justify-center p-10 min-h-[180px]">
+                  <img src={services[0].iconImage} alt={services[0].title} className="w-24 h-24 object-contain group-hover:scale-110 transition-transform duration-300" />
+                </div>
+                <div className="flex-1 p-8 lg:p-10 flex flex-col justify-between">
+                  <div>
+                    <p className="font-accent text-brand-orange text-base mb-2">Tjeneste 01</p>
+                    <h3 className="font-black text-brand-black text-2xl lg:text-3xl mb-4 group-hover:text-brand-orange transition-colors">{services[0].title}</h3>
+                    <p className="text-brand-darkgray leading-relaxed">{services[0].description}</p>
+                  </div>
+                  <div className="mt-6 flex items-center gap-2 text-brand-orange font-bold">
+                    Les mer <span className="group-hover:translate-x-1 transition-transform inline-block">&rarr;</span>
+                  </div>
+                </div>
+              </Link>
             </ScrollReveal>
-            <div className="flex flex-col gap-6">
+            {/* 3 smaller stacked cards */}
+            <div className="flex flex-col gap-4">
               {services.slice(1).map((service, i) => (
-                <ScrollReveal key={service.href} delay={i * 60} className="flex-1">
-                  <ServiceCard {...service} />
+                <ScrollReveal key={service.href} delay={(i + 1) * 80} className="flex-1">
+                  <Link href={service.href} className="group h-full flex items-center gap-4 p-5 rounded-[20px] border border-brand-gray hover:shadow-md hover:border-brand-orange/30 transition-all duration-300 bg-brand-white">
+                    <img src={service.iconImage} alt={service.title} className="w-14 h-14 object-contain shrink-0 group-hover:scale-110 transition-transform duration-300" />
+                    <div className="flex-1 min-w-0">
+                      <h3 className="font-black text-brand-black text-base mb-1 group-hover:text-brand-orange transition-colors">{service.title}</h3>
+                      <p className="text-brand-darkgray text-sm leading-relaxed line-clamp-2">{service.description}</p>
+                    </div>
+                    <span className="text-brand-orange font-bold text-lg shrink-0 group-hover:translate-x-1 transition-transform">&rarr;</span>
+                  </Link>
                 </ScrollReveal>
               ))}
             </div>
