@@ -21,10 +21,10 @@ export default function Footer() {
           {/* Brand col — spans 2 of 5 */}
           <div className="lg:col-span-2">
             <div className="mb-5">
-              <Image src="/images/logo-white.png" alt="Alesund Brannkonsult" width={234} height={72} className="object-contain" />
+              <Image src="/images/logo-white.png" alt="Ålesund Brannkonsult" width={234} height={72} className="object-contain" />
             </div>
             <p className="text-brand-white/60 text-sm leading-relaxed mb-6 max-w-xs">
-              Brannprosjektering i Alesund og pa Sunnmore. Sentralt godkjent foretak for tiltaksklasse 1 og 2. Vi hjelper private, arkitekter og utbyggere i hele More og Romsdal.
+              Brannprosjektering i Ålesund og på Sunnmøre. Sentralt godkjent foretak for tiltaksklasse 1 og 2. Vi hjelper private, arkitekter og utbyggere i hele Møre og Romsdal.
             </p>
             <div className="flex gap-4">
               <a href="#" aria-label="Facebook" className="text-brand-white/50 hover:text-brand-orange transition-colors"><FacebookIcon /></a>
@@ -56,7 +56,7 @@ export default function Footer() {
             <div className="space-y-3 text-sm text-brand-white/60">
               <a href="tel:+4700000000" className="flex items-center gap-2 hover:text-brand-orange transition-colors"><Phone size={13} className="shrink-0" /> +47 000 00 000</a>
               <a href="mailto:post@aalesundbrannkonsult.no" className="flex items-center gap-2 hover:text-brand-orange transition-colors"><Mail size={13} className="shrink-0" /> post@aalesundbrannkonsult.no</a>
-              <p className="flex items-start gap-2"><MapPin size={13} className="shrink-0 mt-0.5" /> Alesund, Sunnmore</p>
+              <p className="flex items-start gap-2"><MapPin size={13} className="shrink-0 mt-0.5" /> Ålesund, Sunnmøre</p>
               <p className="text-brand-white/40 text-xs pt-1">Man–Fre 08:00–16:00</p>
             </div>
           </div>
@@ -64,7 +64,7 @@ export default function Footer() {
 
         {/* Copyright */}
         <div className="border-t border-brand-white/10 py-5 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-brand-white/40 text-xs">&copy; {new Date().getFullYear()} Alesund Brannkonsult AS. Alle rettigheter forbeholdt.</p>
+          <p className="text-brand-white/40 text-xs">&copy; {new Date().getFullYear()} Ålesund Brannkonsult AS. Alle rettigheter forbeholdt.</p>
           <Image src="/images/sentralt-godkjent.png" alt="Sentralt godkjent" width={80} height={80} className="object-contain" />
         </div>
       </div>

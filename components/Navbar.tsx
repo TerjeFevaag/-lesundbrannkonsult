@@ -29,7 +29,7 @@ export default function Navbar() {
         <Link href="/" className="shrink-0">
           <Image
             src={scrolled ? '/images/logo-black.png' : '/images/logo-white.png'}
-            alt="Alesund Brannkonsult"
+            alt="Ålesund Brannkonsult"
             width={234} height={65}
             className="object-contain h-[52px] w-auto"
             priority
