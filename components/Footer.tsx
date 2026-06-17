@@ -45,7 +45,7 @@ export default function Footer() {
           <div>
             <h3 className="font-bold text-brand-white mb-5 text-sm">Tjenester</h3>
             <ul className="space-y-3">
-              {[{ href: '/brannkonsept', label: 'Brannkonsept' }, { href: '/brannprosjektering', label: 'Brannprosjektering' }, { href: '/branntilsyn', label: 'Branntilsyn' }, { href: '/uavhengig-kontroll', label: 'Uavhengig kontroll' }].map((link) => (
+              {[{ href: '/brannkonsept', label: 'Brannkonsept' }, { href: '/brannprosjektering', label: 'Brannprosjektering' }, { href: '/branninspeksjon', label: 'Branninspeksjon' }, { href: '/uavhengig-kontroll', label: 'Uavhengig kontroll' }].map((link) => (
                 <li key={link.href}><Link href={link.href} className="text-brand-white/60 hover:text-brand-orange transition-colors text-sm">{link.label}</Link></li>
               ))}
             </ul>

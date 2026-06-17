@@ -20,9 +20,9 @@ const services = [
   },
   {
     iconImage: '/images/icon-branntilsyn.png',
-    title: 'Branntilsyn',
+    title: 'Branninspeksjon',
     description: 'Har du fått pålegg etter branntilsyn? Vi inspiserer hele bygningen og utarbeider tilstandsrapport og handlingsplan.',
-    href: '/branntilsyn',
+    href: '/branninspeksjon',
   },
   {
     iconImage: '/images/icon-uavhengig-kontroll.png',
