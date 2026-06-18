@@ -1,8 +1,46 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import Link from 'next/link'
 import { CheckCircle } from 'lucide-react'
 import ScrollReveal from '@/components/ScrollReveal'
 import FAQAccordion from '@/components/FAQAccordion'
+
+const serviceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  serviceType: 'Brannprosjektering',
+  name: 'Brannprosjektering i Ålesund',
+  description: 'Brannprosjektering for tilbygg, nybygg, bruksendring og rehabilitering i Ålesund og på Sunnmøre. Fastpris alltid.',
+  provider: {
+    '@type': 'LocalBusiness',
+    name: 'Ålesund Brannkonsult AS',
+    url: 'https://www.aalesundbrannkonsult.no',
+  },
+  areaServed: [
+    { '@type': 'City', name: 'Ålesund' },
+    { '@type': 'AdministrativeArea', name: 'Sunnmøre' },
+    { '@type': 'AdministrativeArea', name: 'Møre og Romsdal' },
+  ],
+  offers: {
+    '@type': 'Offer',
+    priceCurrency: 'NOK',
+    priceSpecification: {
+      '@type': 'PriceSpecification',
+      minPrice: 15000,
+      priceCurrency: 'NOK',
+      description: 'Fra kr 15 000 ekskl. mva. i tiltaksklasse 2',
+    },
+  },
+}
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Hjem', item: 'https://www.aalesundbrannkonsult.no' },
+    { '@type': 'ListItem', position: 2, name: 'Brannprosjektering', item: 'https://www.aalesundbrannkonsult.no/brannprosjektering' },
+  ],
+}
 
 export const metadata: Metadata = {
   title: 'Brannprosjektering Ålesund | Ålesund Brannkonsult',
@@ -20,6 +58,8 @@ const faqItems = [
 export default function BrannprosjekteringPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <section className="px-4 sm:px-8 pt-8 pb-0 bg-brand-lightgray">
         <div className="max-w-[1350px] mx-auto">
           <div className="bg-brand-dark rounded-[30px] px-8 lg:px-16 py-16 lg:py-24">
@@ -48,7 +88,7 @@ export default function BrannprosjekteringPage() {
               </ul>
               <h3 className="text-brand-black font-bold text-lg mb-3">Start tidlig — spar penger</h3>
               <p className="text-brand-darkgray leading-relaxed">
-                Jo tidligere vi kobles inn, jo enklere og billigere er det å finne gode branntekniske løsninger. Kontakt oss allerede i skissefasen.
+                Jo tidligere vi kobles inn, jo enklere og billigere er det å finne gode branntekniske løsninger. Kontakt oss allerede i skissefasen. Vi betjener Ålesund, Ørsta, Volda, Stranda, Sykkylven og hele Møre og Romsdal.
               </p>
             </div>
           </ScrollReveal>
@@ -62,9 +102,12 @@ export default function BrannprosjekteringPage() {
 
           <ScrollReveal>
             <div className="bg-brand-orange rounded-[30px] p-8 lg:p-12 flex flex-col sm:flex-row items-center justify-between gap-6">
-              <div>
-                <h2 className="text-brand-white font-black text-2xl mb-2">Be om tilbud på brannprosjektering</h2>
-                <p className="text-brand-white/80">Send tegninger og prosjektbeskrivelse — fastpris innen 24 timer.</p>
+              <div className="flex items-center gap-6">
+                <Image src="/images/sentralt-godkjent.png" alt="Sentralt godkjent" width={64} height={64} className="object-contain shrink-0" />
+                <div>
+                  <h2 className="text-brand-white font-black text-2xl mb-2">Be om tilbud på brannprosjektering</h2>
+                  <p className="text-brand-white/80">Send tegninger og prosjektbeskrivelse — fastpris innen 24 timer.</p>
+                </div>
               </div>
               <Link href="/kontakt-oss" className="shrink-0 border-2 border-brand-white text-brand-white font-bold px-8 py-4 rounded-[10px] hover:bg-brand-white hover:text-brand-orange transition-all">
                 Kontakt oss

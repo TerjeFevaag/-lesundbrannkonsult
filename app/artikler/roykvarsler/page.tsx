@@ -3,6 +3,16 @@ import Image from 'next/image'
 import Link from 'next/link'
 import ScrollReveal from '@/components/ScrollReveal'
 
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Hjem', item: 'https://www.aalesundbrannkonsult.no' },
+    { '@type': 'ListItem', position: 2, name: 'Artikler', item: 'https://www.aalesundbrannkonsult.no/artikler/roykvarsler' },
+    { '@type': 'ListItem', position: 3, name: 'Riktig røykvarsler', item: 'https://www.aalesundbrannkonsult.no/artikler/roykvarsler' },
+  ],
+}
+
 export const metadata: Metadata = {
   title: 'Riktig røykvarsler redder liv | Ålesund Brannkonsult',
   description: 'Krav til røykvarslere i norske boliger og riktig plassering.',
@@ -12,6 +22,7 @@ export const metadata: Metadata = {
 export default function RoykVarslerPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <section className="px-4 sm:px-8 pt-8 pb-0 bg-brand-lightgray">
         <div className="max-w-[800px] mx-auto">
           <div className="bg-brand-dark rounded-[30px] px-8 lg:px-12 py-14">

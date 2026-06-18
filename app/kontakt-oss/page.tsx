@@ -3,6 +3,15 @@ import { Phone, Mail, MapPin, Clock } from 'lucide-react'
 import ScrollReveal from '@/components/ScrollReveal'
 import ContactForm from '@/components/ContactForm'
 
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Hjem', item: 'https://www.aalesundbrannkonsult.no' },
+    { '@type': 'ListItem', position: 2, name: 'Kontakt oss', item: 'https://www.aalesundbrannkonsult.no/kontakt-oss' },
+  ],
+}
+
 export const metadata: Metadata = {
   title: 'Kontakt oss | Ålesund Brannkonsult',
   description: 'Kontakt Ålesund Brannkonsult for brannprosjektering i Ålesund og på Sunnmøre. Svar innen 24 timer.',
@@ -12,6 +21,7 @@ export const metadata: Metadata = {
 export default function KontaktOssPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <section className="px-4 sm:px-8 pt-8 pb-0 bg-brand-lightgray">
         <div className="max-w-[1350px] mx-auto">
           <div className="bg-brand-dark rounded-[30px] px-8 lg:px-16 py-16 lg:py-24">

@@ -1,8 +1,46 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import Link from 'next/link'
 import { CheckCircle } from 'lucide-react'
 import ScrollReveal from '@/components/ScrollReveal'
 import FAQAccordion from '@/components/FAQAccordion'
+
+const serviceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  serviceType: 'Brannkonsept',
+  name: 'Brannkonsept i Ålesund',
+  description: 'Helhetlig brannkonsept for byggesaker i Ålesund og på Sunnmøre. Dokumenterer brannsikkerhet i henhold til TEK17.',
+  provider: {
+    '@type': 'LocalBusiness',
+    name: 'Ålesund Brannkonsult AS',
+    url: 'https://www.aalesundbrannkonsult.no',
+  },
+  areaServed: [
+    { '@type': 'City', name: 'Ålesund' },
+    { '@type': 'AdministrativeArea', name: 'Sunnmøre' },
+    { '@type': 'AdministrativeArea', name: 'Møre og Romsdal' },
+  ],
+  offers: {
+    '@type': 'Offer',
+    priceCurrency: 'NOK',
+    priceSpecification: {
+      '@type': 'PriceSpecification',
+      minPrice: 15000,
+      priceCurrency: 'NOK',
+      description: 'Fra kr 15 000 ekskl. mva. i tiltaksklasse 2',
+    },
+  },
+}
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Hjem', item: 'https://www.aalesundbrannkonsult.no' },
+    { '@type': 'ListItem', position: 2, name: 'Brannkonsept', item: 'https://www.aalesundbrannkonsult.no/brannkonsept' },
+  ],
+}
 
 export const metadata: Metadata = {
   title: 'Brannkonsept Ålesund | Ålesund Brannkonsult',
@@ -21,7 +59,7 @@ const faqItems = [
   },
   {
     question: 'Leverer dere til Ålesund kommune?',
-    answer: 'Ja, vi har god erfaring med kravene i Ålesund kommune og leverer til hele Møre og Romsdal.',
+    answer: 'Ja, vi har god erfaring med kravene i Ålesund kommune og leverer til hele Møre og Romsdal — inkludert Ørsta, Volda, Stranda og Sykkylven.',
   },
   {
     question: 'Tar dere oppdrag utenfor Ålesund?',
@@ -32,6 +70,8 @@ const faqItems = [
 export default function BrannkonseptPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       {/* Rounded hero card — not full-bleed */}
       <section className="px-4 sm:px-8 pt-8 pb-0 bg-brand-lightgray">
         <div className="max-w-[1350px] mx-auto">
@@ -97,9 +137,12 @@ export default function BrannkonseptPage() {
           {/* CTA card in orange */}
           <ScrollReveal>
             <div className="bg-brand-orange rounded-[30px] p-8 lg:p-12 flex flex-col sm:flex-row items-center justify-between gap-6">
-              <div>
-                <h2 className="text-brand-white font-black text-2xl mb-2">Trenger du brannkonsept i Ålesund?</h2>
-                <p className="text-brand-white/80">Vi svarer innen 24 timer med et uforpliktende tilbud.</p>
+              <div className="flex items-center gap-6">
+                <Image src="/images/sentralt-godkjent.png" alt="Sentralt godkjent" width={64} height={64} className="object-contain shrink-0" />
+                <div>
+                  <h2 className="text-brand-white font-black text-2xl mb-2">Trenger du brannkonsept i Ålesund?</h2>
+                  <p className="text-brand-white/80">Vi svarer innen 24 timer med et uforpliktende tilbud.</p>
+                </div>
               </div>
               <Link href="/kontakt-oss" className="shrink-0 border-2 border-brand-white text-brand-white font-bold px-8 py-4 rounded-[10px] hover:bg-brand-white hover:text-brand-orange transition-all">
                 Kontakt oss

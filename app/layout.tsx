@@ -21,11 +21,11 @@ const dancing = Dancing_Script({
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.aalesundbrannkonsult.no'),
   title: 'Brannprosjektering i Ålesund | Ålesund Brannkonsult',
-  description: 'Ålesund Brannkonsult tilbyr brannkonsept, brannprosjektering og branntilsyn i Ålesund og på Sunnmøre. Sentralt godkjent foretak. Fastpris.',
+  description: 'Ålesund Brannkonsult tilbyr brannkonsept, brannprosjektering og branninspeksjon i Ålesund og på Sunnmøre. Sentralt godkjent foretak. Fastpris.',
   alternates: { canonical: 'https://www.aalesundbrannkonsult.no' },
   openGraph: {
     title: 'Brannprosjektering i Ålesund | Ålesund Brannkonsult',
-    description: 'Ålesund Brannkonsult tilbyr brannkonsept, brannprosjektering og branntilsyn i Ålesund og på Sunnmøre.',
+    description: 'Ålesund Brannkonsult tilbyr brannkonsept, brannprosjektering og branninspeksjon i Ålesund og på Sunnmøre.',
     url: 'https://www.aalesundbrannkonsult.no',
     siteName: 'Ålesund Brannkonsult',
     locale: 'nb_NO',
@@ -36,19 +36,37 @@ export const metadata: Metadata = {
 
 const jsonLd = {
   '@context': 'https://schema.org',
-  '@type': 'LocalBusiness',
+  '@type': ['LocalBusiness', 'ProfessionalService'],
   name: 'Ålesund Brannkonsult AS',
-  description: 'Brannprosjektering og brannkonsept i Ålesund',
-  telephone: '+4700000000',
+  description: 'Brannprosjektering, brannkonsept og branninspeksjon i Ålesund og på Sunnmøre. Sentralt godkjent foretak.',
+  telephone: 'TODO: legg inn ekte telefonnummer',
   email: 'post@aalesundbrannkonsult.no',
   address: {
     '@type': 'PostalAddress',
+    streetAddress: 'TODO: legg inn gateadresse',
     addressLocality: 'Ålesund',
+    postalCode: 'TODO: legg inn postnummer',
     addressCountry: 'NO',
   },
+  geo: {
+    '@type': 'GeoCoordinates',
+    latitude: 'TODO: legg inn breddegrad',
+    longitude: 'TODO: legg inn lengdegrad',
+  },
+  openingHoursSpecification: [
+    {
+      '@type': 'OpeningHoursSpecification',
+      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+      opens: '08:00',
+      closes: '16:00',
+    },
+  ],
+  sameAs: [
+    'TODO: legg inn Facebook-URL',
+    'TODO: legg inn LinkedIn-URL',
+  ],
   url: 'https://www.aalesundbrannkonsult.no',
   priceRange: 'Fra kr 15 000',
-  hasCredential: 'Sentralt godkjent tiltaksklasse 1 og 2',
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

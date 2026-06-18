@@ -3,6 +3,16 @@ import Image from 'next/image'
 import Link from 'next/link'
 import ScrollReveal from '@/components/ScrollReveal'
 
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Hjem', item: 'https://www.aalesundbrannkonsult.no' },
+    { '@type': 'ListItem', position: 2, name: 'Artikler', item: 'https://www.aalesundbrannkonsult.no/artikler/pipebrann' },
+    { '@type': 'ListItem', position: 3, name: 'Forebygg pipebrann', item: 'https://www.aalesundbrannkonsult.no/artikler/pipebrann' },
+  ],
+}
+
 export const metadata: Metadata = {
   title: 'Forebygg pipebrann med enkle grep | Ålesund Brannkonsult',
   description: 'Er du i faresonen for pipebrann? Vi forklarer hva som forårsaker den og hva du kan gjøre.',
@@ -12,6 +22,7 @@ export const metadata: Metadata = {
 export default function PipebrannPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <section className="px-4 sm:px-8 pt-8 pb-0 bg-brand-lightgray">
         <div className="max-w-[800px] mx-auto">
           <div className="bg-brand-dark rounded-[30px] px-8 lg:px-12 py-14">

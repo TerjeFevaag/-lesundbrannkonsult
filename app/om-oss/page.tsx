@@ -4,6 +4,15 @@ import Link from 'next/link'
 import { CheckCircle } from 'lucide-react'
 import ScrollReveal from '@/components/ScrollReveal'
 
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Hjem', item: 'https://www.aalesundbrannkonsult.no' },
+    { '@type': 'ListItem', position: 2, name: 'Om oss', item: 'https://www.aalesundbrannkonsult.no/om-oss' },
+  ],
+}
+
 export const metadata: Metadata = {
   title: 'Om oss | Ålesund Brannkonsult',
   description: 'Ålesund Brannkonsult er et sentralt godkjent brannprosjekteringsfirma med over ti års erfaring i Ålesund og på Sunnmøre.',
@@ -13,6 +22,7 @@ export const metadata: Metadata = {
 export default function OmOssPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <section className="px-4 sm:px-8 pt-8 pb-0 bg-brand-lightgray">
         <div className="max-w-[1350px] mx-auto">
           <div className="bg-brand-dark rounded-[30px] px-8 lg:px-16 py-16 lg:py-24">

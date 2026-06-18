@@ -79,9 +79,17 @@ const faqItems = [
   },
 ]
 
+const websiteSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: 'Ålesund Brannkonsult',
+  url: 'https://www.aalesundbrannkonsult.no',
+}
+
 export default function HomePage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }} />
       {/* ── Hero — city image with card anchored to bottom-right ── */}
       <section className="relative h-[85vh] min-h-[500px] overflow-hidden -mt-20 lg:-mt-24">
         <Image
@@ -101,7 +109,7 @@ export default function HomePage() {
               Brannprosjektering i Ålesund
             </h1>
             <p className="hero-3 text-brand-white/70 text-base lg:text-lg leading-relaxed mb-7">
-              Vi hjelper deg med brannkonsept, brannprosjektering og branntilsyn i Ålesund og på Sunnmøre. Sentralt godkjent. Fastpris.
+              Vi hjelper deg med brannkonsept, brannprosjektering og branninspeksjon i Ålesund og på Sunnmøre. Sentralt godkjent. Fastpris.
             </p>
             <div className="hero-4 flex flex-col sm:flex-row gap-3">
               <Link href="/kontakt-oss" className="bg-brand-orange text-brand-white font-bold px-8 py-3.5 rounded-[10px] hover:opacity-90 transition-opacity text-center">
