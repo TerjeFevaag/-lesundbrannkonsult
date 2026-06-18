@@ -49,10 +49,11 @@ export const metadata: Metadata = {
 }
 
 const faqItems = [
-  { question: 'Hva koster brannprosjektering i Ålesund?', answer: 'Fra ca. 15 000 kr ekskl. mva. i tiltaksklasse 2. Vi tilbyr alltid fastpris.' },
+  { question: 'Hva koster brannprosjektering i Ålesund?', answer: 'Fra ca. 15 000 kr ekskl. mva. i tiltaksklasse 2. Vi tilbyr alltid fastpris — uansett hvor i landet prosjektet er.' },
   { question: 'Trenger jeg brannprosjektering for tilbygg?', answer: 'Ja, de fleste søknadspliktige tiltak krever brannprosjektering.' },
-  { question: 'Er befaring nødvendig?', answer: 'Vanligvis ikke. Digitale tegninger er som regel tilstrekkelig.' },
-  { question: 'Hva trenger dere for pristilbud?', answer: 'Adresse, plantegninger og en kort prosjektbeskrivelse.' },
+  { question: 'Tar dere oppdrag utenfor Ålesund?', answer: 'Ja, vi leverer brannprosjektering i hele Norge. Ålesund og Sunnmøre er basen vår, men vi bistår prosjekter i Møre og Romsdal, på Vestlandet og ellers i landet. De fleste saker løses digitalt uten befaring.' },
+  { question: 'Er befaring nødvendig?', answer: 'Vanligvis ikke. Digitale tegninger er som regel tilstrekkelig — noe som gjør det enkelt å jobbe med oss uansett hvor prosjektet er.' },
+  { question: 'Hva trenger dere for pristilbud?', answer: 'Adresse, plantegninger og en kort prosjektbeskrivelse. Vi svarer med fastpris innen 24 timer.' },
 ]
 
 export default function BrannprosjekteringPage() {

@@ -71,7 +71,7 @@ const faqItems = [
   },
   {
     question: 'Tar dere oppdrag utenfor Ålesund?',
-    answer: 'Vi hjelper kunder i Ålesund, Sunnmøre og hele landet. Kontakt oss uansett hvor i Norge prosjektet ditt er.',
+    answer: 'Ja, vi leverer brannprosjektering i hele Norge. Ålesund og Sunnmøre er basen vår, men vi bistår prosjekter fra Tromsø til Stavanger. De fleste saker løses digitalt, så geografi er sjelden en hindring.',
   },
   {
     question: 'Hva trenger dere for å gi pristilbud?',

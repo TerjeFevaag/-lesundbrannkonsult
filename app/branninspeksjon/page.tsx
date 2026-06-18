@@ -45,7 +45,8 @@ const breadcrumbSchema = {
 const faqItems = [
   { question: 'Hva er forskjellen på branntilsyn og branninspeksjon?', answer: 'Branntilsyn utføres av kommunens brann- og redningsetat. Branninspeksjon er en frivillig gjennomgang av privat brannrådgiver med tilstandsrapport.' },
   { question: 'Hvem er ansvarlig for brannsikkerheten i et sameie?', answer: 'Eier av bygget — typisk et borettslag eller sameie — er ansvarlig for å følge opp pålegg.' },
-  { question: 'Hva koster en branninspeksjon i Ålesund?', answer: 'Avhengig av byggets størrelse. Kontakt oss for fastpris.' },
+  { question: 'Hva koster en branninspeksjon i Ålesund?', answer: 'Prisen avhenger av byggets størrelse. Kontakt oss for fastpris — vi betjener kunder i Ålesund, på Sunnmøre og i hele Norge.' },
+  { question: 'Utfører dere branninspeksjon utenfor Ålesund?', answer: 'Ja, vi tar oppdrag i hele landet. Vi er basert i Ålesund, men rykker ut til Sunnmøre, Møre og Romsdal og resten av Norge ved behov.' },
   { question: 'Gjelder oppgraderingskravet for alle eldre bygninger?', answer: 'Ja, alle bygg skal ha brannsikkerhet tilsvarende BF85 eller bedre.' },
 ]
 

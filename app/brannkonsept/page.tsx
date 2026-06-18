@@ -62,8 +62,8 @@ const faqItems = [
     answer: 'Ja, vi har god erfaring med kravene i Ålesund kommune og leverer til hele Møre og Romsdal — inkludert Ørsta, Volda, Stranda og Sykkylven.',
   },
   {
-    question: 'Tar dere oppdrag utenfor Ålesund?',
-    answer: 'Ja, vi tar oppdrag på Sunnmøre, i Møre og Romsdal og i hele landet.',
+    question: 'Tar dere oppdrag utenfor Sunnmøre?',
+    answer: 'Ja, vi leverer brannkonsept i hele Norge. Ålesund er basen vår, men vi bistår arkitekter, utbyggere og private kunder fra Tromsø til Stavanger. De fleste saker løses digitalt uten befaring.',
   },
 ]
 

@@ -46,8 +46,9 @@ export const metadata: Metadata = {
 const faqItems = [
   { question: 'Hva er uavhengig kontroll av brann?', answer: 'En faglig gjennomgang av brannkonseptet utført av et uavhengig foretak. Sikrer at løsningene er i tråd med TEK17.' },
   { question: 'Når er det krav om UK?', answer: 'Krav om UK gjelder ved brannprosjektering i tiltaksklasse 2 eller høyere, etter SAK10.' },
-  { question: 'Hva koster uavhengig kontroll?', answer: 'Avhengig av byggets størrelse og tiltaksklasse. Kontakt oss for fastpris.' },
+  { question: 'Hva koster uavhengig kontroll?', answer: 'Avhengig av byggets størrelse og tiltaksklasse. Kontakt oss for fastpris — vi betjener prosjekter i Ålesund, på Sunnmøre og i hele Norge.' },
   { question: 'Kan dere ta UK uten å ha prosjektert?', answer: 'Ja, vi tar oppdrag som kontrollerende for brannkonsept vi ikke har utarbeidet.' },
+  { question: 'Tar dere oppdrag utenfor Ålesund og Sunnmøre?', answer: 'Ja, vi gjennomfører uavhengig kontroll over hele landet. Ålesund er basen vår, men vi bistår prosjekter i Møre og Romsdal, på Vestlandet og ellers i Norge.' },
 ]
 
 export default function UavhengigKontrollPage() {
