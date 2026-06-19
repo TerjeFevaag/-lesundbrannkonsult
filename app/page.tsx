@@ -1,4 +1,20 @@
+import type { Metadata } from 'next'
 import Image from 'next/image'
+
+export const metadata: Metadata = {
+  title: 'Brannprosjektering i Ålesund | Ålesund Brannkonsult',
+  description: 'Ålesund Brannkonsult tilbyr brannkonsept, brannprosjektering og branninspeksjon i Ålesund og på Sunnmøre. Sentralt godkjent foretak. Fastpris.',
+  alternates: { canonical: 'https://www.aalesundbrannkonsult.no' },
+  openGraph: {
+    title: 'Brannprosjektering i Ålesund | Ålesund Brannkonsult',
+    description: 'Ålesund Brannkonsult tilbyr brannkonsept, brannprosjektering og branninspeksjon i Ålesund og på Sunnmøre.',
+    url: 'https://www.aalesundbrannkonsult.no',
+    siteName: 'Ålesund Brannkonsult',
+    locale: 'nb_NO',
+    type: 'website',
+    images: [{ url: '/images/hero.jpg', width: 1200, height: 630, alt: 'Ålesund Brannkonsult' }],
+  },
+}
 import Link from 'next/link'
 import { CheckCircle } from 'lucide-react'
 import ScrollReveal from '@/components/ScrollReveal'
