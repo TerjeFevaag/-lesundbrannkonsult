@@ -15,11 +15,11 @@ export default function TopBar() {
     <div className="bg-brand-dark text-brand-white text-sm py-2">
       <div className="max-w-[1350px] mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
         <div className="flex items-center gap-6">
-          <a href="tel:+4700000000" className="flex items-center gap-2 hover:text-brand-orange transition-colors">
-            <Phone size={14} /><span>+47 000 00 000</span>
+          <a href="tel:+4745601942" className="flex items-center gap-2 hover:text-brand-orange transition-colors">
+            <Phone size={14} /><span>456 01 942</span>
           </a>
-          <a href="mailto:post@aalesundbrannkonsult.no" className="hidden sm:flex items-center gap-2 hover:text-brand-orange transition-colors">
-            <Mail size={14} /><span>post@aalesundbrannkonsult.no</span>
+          <a href="mailto:post@brannkonsult.no" className="hidden sm:flex items-center gap-2 hover:text-brand-orange transition-colors">
+            <Mail size={14} /><span>post@brannkonsult.no</span>
           </a>
         </div>
         <div className="flex items-center gap-4">
