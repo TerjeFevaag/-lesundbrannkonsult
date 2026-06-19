@@ -59,7 +59,7 @@ export default function OmOssPage() {
                   </ul>
                 </div>
                 <div className="relative rounded-[20px] overflow-hidden h-72 lg:h-96">
-                  <Image src="/images/about-team.png" alt="Ålesund Brannkonsult" fill className="object-cover" sizes="(max-width:1024px) 100vw, 50vw" />
+                  <Image src="/images/Om-oss.jpg" alt="Teamet i Ålesund Brannkonsult" fill className="object-cover" sizes="(max-width:1024px) 100vw, 50vw" />
                 </div>
               </div>
             </div>
