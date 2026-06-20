@@ -18,8 +18,8 @@ export default function TopBar() {
           <a href="tel:+4745601942" className="flex items-center gap-2 hover:text-brand-orange transition-colors">
             <Phone size={14} /><span>456 01 942</span>
           </a>
-          <a href="mailto:post@brannkonsult.no" className="hidden sm:flex items-center gap-2 hover:text-brand-orange transition-colors">
-            <Mail size={14} /><span>post@brannkonsult.no</span>
+          <a href="mailto:post@ålesundbrannkonsult.no" className="hidden sm:flex items-center gap-2 hover:text-brand-orange transition-colors">
+            <Mail size={14} /><span>post@ålesundbrannkonsult.no</span>
           </a>
         </div>
         <div className="flex items-center gap-4">

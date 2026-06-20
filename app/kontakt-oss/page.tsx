@@ -59,7 +59,7 @@ export default function KontaktOssPage() {
                     <div className="w-10 h-10 rounded-full bg-brand-orange/20 flex items-center justify-center shrink-0"><Mail size={18} className="text-brand-orange" /></div>
                     <div>
                       <p className="text-brand-white/50 text-sm mb-1">E-post</p>
-                      <a href="mailto:post@brannkonsult.no" className="text-brand-white font-bold hover:text-brand-orange transition-colors break-all">post@brannkonsult.no</a>
+                      <a href="mailto:post@ålesundbrannkonsult.no" className="text-brand-white font-bold hover:text-brand-orange transition-colors break-all">post@ålesundbrannkonsult.no</a>
                     </div>
                   </div>
                   <div className="flex items-start gap-4">
