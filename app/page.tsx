@@ -120,12 +120,12 @@ export default function HomePage() {
         {/* Floating card anchored to bottom-right */}
         <div className="absolute bottom-8 left-4 right-4 sm:left-auto sm:right-8 sm:w-[480px] lg:right-8 lg:w-[560px]">
           <div className="bg-brand-black/80 backdrop-blur-sm rounded-[30px] p-8 lg:p-10">
-            <p className="hero-1 font-accent text-brand-orange text-xl mb-3">Ålesund Brannkonsult</p>
+            <p className="hero-1 font-accent text-brand-orange text-xl mb-3">Sentralt godkjent siden 2013</p>
             <h1 className="hero-2 text-brand-white font-black text-3xl lg:text-4xl xl:text-5xl leading-tight mb-5">
-              Brannprosjektering i Ålesund
+              Din brannrådgiver i Ålesund
             </h1>
             <p className="hero-3 text-brand-white/70 text-base lg:text-lg leading-relaxed mb-7">
-              Vi hjelper deg med brannkonsept, brannprosjektering og branninspeksjon i Ålesund og på Sunnmøre. Sentralt godkjent. Fastpris.
+              Over 1 200 prosjekter. Brannkonsept, brannprosjektering og branninspeksjon for private, arkitekter og utbyggere — i Ålesund og over hele landet.
             </p>
             <div className="hero-4 flex flex-col sm:flex-row gap-3">
               <Link href="/kontakt-oss" className="bg-brand-orange text-brand-white font-bold px-8 py-3.5 rounded-[10px] hover:opacity-90 transition-opacity text-center">
