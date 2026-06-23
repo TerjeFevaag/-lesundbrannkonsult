@@ -52,7 +52,7 @@ export default function KontaktOssPage() {
                     <div className="w-10 h-10 rounded-full bg-brand-orange/20 flex items-center justify-center shrink-0"><Phone size={18} className="text-brand-orange" /></div>
                     <div>
                       <p className="text-brand-white/50 text-sm mb-1">Telefon</p>
-                      <a href="tel:+4745411440" className="text-brand-white font-bold hover:text-brand-orange transition-colors">454 11 440</a>
+                      <a href="tel:+4797349273" className="text-brand-white font-bold hover:text-brand-orange transition-colors">973 49 273</a>
                     </div>
                   </div>
                   <div className="flex items-start gap-4">

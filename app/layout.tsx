@@ -39,7 +39,7 @@ const jsonLd = {
   '@type': ['LocalBusiness', 'ProfessionalService'],
   name: 'Ålesund Brannkonsult AS',
   description: 'Brannprosjektering, brannkonsept og branninspeksjon i Ålesund og på Sunnmøre. Sentralt godkjent foretak.',
-  telephone: '+4745411440',
+  telephone: '+4797349273',
   email: 'post@ålesundbrannkonsult.no',
   address: {
     '@type': 'PostalAddress',
