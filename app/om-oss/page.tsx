@@ -27,10 +27,10 @@ export default function OmOssPage() {
         <div className="max-w-[1350px] mx-auto">
           <div className="bg-brand-dark rounded-[30px] px-8 lg:px-16 py-16 lg:py-24">
             <p className="font-accent text-brand-orange text-xl mb-4">Om oss</p>
-            <h1 className="text-brand-white font-black text-4xl lg:text-6xl leading-tight mb-6">Ålesund Brannkonsult</h1>
+            <h1 className="text-brand-white font-black text-4xl lg:text-6xl leading-tight mb-6">Brannsikkerhet er alt vi gjør</h1>
             <div className="w-20 h-1.5 bg-brand-orange mb-8" />
             <p className="text-brand-white/70 text-lg lg:text-xl leading-relaxed max-w-2xl">
-              Sentralt godkjent brannprosjekteringsfirma med over ti års erfaring. Vi kjenner Ålesund og Sunnmøre.
+              Siden 2013 har vi levert over 1 200 brannprosjekter for private, arkitekter og utbyggere. Vi selger ingen produkter — bare uavhengig rådgivning du kan stole på.
             </p>
           </div>
         </div>
