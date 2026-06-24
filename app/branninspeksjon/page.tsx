@@ -5,7 +5,7 @@ import ScrollReveal from '@/components/ScrollReveal'
 import FAQAccordion from '@/components/FAQAccordion'
 
 export const metadata: Metadata = {
-  title: 'Branninspeksjon Ålesund | Ålesund Brannkonsult',
+  title: 'Branninspeksjon i Ålesund | Brannkonsult AS',
   description: 'Branninspeksjon i Ålesund og på Sunnmøre. Tilstandsrapport og handlingsplan fra sentralt godkjent foretak. Kontakt oss for fastpris.',
   alternates: { canonical: 'https://www.aalesundbrannkonsult.no/branninspeksjon' },
 }

@@ -20,11 +20,11 @@ const dancing = Dancing_Script({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.aalesundbrannkonsult.no'),
-  title: 'Brannprosjektering i Ålesund | Ålesund Brannkonsult',
+  title: 'Brannprosjektering i Ålesund | Brannkonsult AS',
   description: 'Ålesund Brannkonsult tilbyr brannkonsept, brannprosjektering og branninspeksjon i Ålesund og på Sunnmøre. Sentralt godkjent foretak. Fastpris.',
   alternates: { canonical: 'https://www.aalesundbrannkonsult.no' },
   openGraph: {
-    title: 'Brannprosjektering i Ålesund | Ålesund Brannkonsult',
+    title: 'Brannprosjektering i Ålesund | Brannkonsult AS',
     description: 'Ålesund Brannkonsult tilbyr brannkonsept, brannprosjektering og branninspeksjon i Ålesund og på Sunnmøre.',
     url: 'https://www.aalesundbrannkonsult.no',
     siteName: 'Ålesund Brannkonsult',

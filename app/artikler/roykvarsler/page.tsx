@@ -14,7 +14,7 @@ const breadcrumbSchema = {
 }
 
 export const metadata: Metadata = {
-  title: 'Riktig røykvarsler redder liv | Ålesund Brannkonsult',
+  title: 'Riktig røykvarsler redder liv | Brannkonsult AS',
   description: 'Krav til røykvarslere i norske boliger og riktig plassering.',
   alternates: { canonical: 'https://www.aalesundbrannkonsult.no/artikler/roykvarsler' },
 }

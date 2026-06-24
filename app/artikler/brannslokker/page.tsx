@@ -14,7 +14,7 @@ const breadcrumbSchema = {
 }
 
 export const metadata: Metadata = {
-  title: 'Har du riktig brannslokkeapparat? | Ålesund Brannkonsult',
+  title: 'Har du riktig brannslokkeapparat? | Brannkonsult AS',
   description: 'Vet du hvilken type brannslokker du trenger? Vi gjennomgår krav og typer.',
   alternates: { canonical: 'https://www.aalesundbrannkonsult.no/artikler/brannslokker' },
 }

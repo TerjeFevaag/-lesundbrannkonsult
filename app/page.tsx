@@ -2,12 +2,12 @@ import type { Metadata } from 'next'
 import Image from 'next/image'
 
 export const metadata: Metadata = {
-  title: 'Brannprosjektering i Ålesund | Ålesund Brannkonsult',
-  description: 'Ålesund Brannkonsult tilbyr brannkonsept, brannprosjektering og branninspeksjon i Ålesund og på Sunnmøre. Sentralt godkjent foretak. Fastpris.',
+  title: 'Brannprosjektering i Ålesund | Brannkonsult AS',
+  description: 'Brannkonsult AS tilbyr brannkonsept, brannprosjektering og branninspeksjon i Ålesund og på Sunnmøre. Sentralt godkjent foretak. Fastpris.',
   alternates: { canonical: 'https://www.aalesundbrannkonsult.no' },
   openGraph: {
-    title: 'Brannprosjektering i Ålesund | Ålesund Brannkonsult',
-    description: 'Ålesund Brannkonsult tilbyr brannkonsept, brannprosjektering og branninspeksjon i Ålesund og på Sunnmøre.',
+    title: 'Brannprosjektering i Ålesund | Brannkonsult AS',
+    description: 'Brannkonsult AS tilbyr brannkonsept, brannprosjektering og branninspeksjon i Ålesund og på Sunnmøre.',
     url: 'https://www.aalesundbrannkonsult.no',
     siteName: 'Ålesund Brannkonsult',
     locale: 'nb_NO',

@@ -43,7 +43,7 @@ const breadcrumbSchema = {
 }
 
 export const metadata: Metadata = {
-  title: 'Brannkonsept Ålesund | Ålesund Brannkonsult',
+  title: 'Brannkonsept i Ålesund | Brannkonsult AS',
   description: 'Vi utarbeider brannkonsept for byggesaker i Ålesund og på Sunnmøre. Sentralt godkjent foretak med fastpris.',
   alternates: { canonical: 'https://www.aalesundbrannkonsult.no/brannkonsept' },
 }

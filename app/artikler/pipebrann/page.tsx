@@ -14,7 +14,7 @@ const breadcrumbSchema = {
 }
 
 export const metadata: Metadata = {
-  title: 'Forebygg pipebrann med enkle grep | Ålesund Brannkonsult',
+  title: 'Forebygg pipebrann med enkle grep | Brannkonsult AS',
   description: 'Er du i faresonen for pipebrann? Vi forklarer hva som forårsaker den og hva du kan gjøre.',
   alternates: { canonical: 'https://www.aalesundbrannkonsult.no/artikler/pipebrann' },
 }
