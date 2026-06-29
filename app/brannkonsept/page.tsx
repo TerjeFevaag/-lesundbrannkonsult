@@ -44,7 +44,7 @@ const breadcrumbSchema = {
 
 export const metadata: Metadata = {
   title: 'Brannkonsept i Ålesund | Brannkonsult AS',
-  description: 'Vi utarbeider brannkonsept for byggesaker i Ålesund og på Sunnmøre. Sentralt godkjent foretak med fastpris.',
+  description: 'Brannkonsept i Ålesund ihht. TEK17 — for tilbygg, nybygg og bruksendring. Sentralt godkjent foretak med 1 200+ prosjekter. Fastpris fra kr 15 000 ekskl. mva.',
   alternates: { canonical: 'https://www.aalesundbrannkonsult.no/brannkonsept' },
 }
 

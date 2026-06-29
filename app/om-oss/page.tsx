@@ -15,7 +15,7 @@ const breadcrumbSchema = {
 
 export const metadata: Metadata = {
   title: 'Om oss | Brannkonsult AS',
-  description: 'Ålesund Brannkonsult er et sentralt godkjent brannprosjekteringsfirma med over ti års erfaring i Ålesund og på Sunnmøre.',
+  description: 'Brannkonsult AS er et sentralt godkjent brannprosjekteringsfirma med over 1 200 prosjekter siden 2013. Nøytral rådgiver uten produktsalg — i Ålesund og over hele Norge.',
   alternates: { canonical: 'https://www.aalesundbrannkonsult.no/om-oss' },
 }
 

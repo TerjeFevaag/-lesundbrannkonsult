@@ -44,7 +44,7 @@ const breadcrumbSchema = {
 
 export const metadata: Metadata = {
   title: 'Brannprosjektering i Ålesund | Brannkonsult AS',
-  description: 'Brannprosjektering i Ålesund og på Sunnmøre. Sentralt godkjent foretak med fastpris.',
+  description: 'Brannprosjektering i Ålesund for tilbygg, nybygg og bruksendring. Sentralt godkjent rådgiver med 1 200+ prosjekter. Fastpris alltid — svar innen 24 timer.',
   alternates: { canonical: 'https://www.aalesundbrannkonsult.no/brannprosjektering' },
 }
 

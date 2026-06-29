@@ -39,7 +39,7 @@ const breadcrumbSchema = {
 
 export const metadata: Metadata = {
   title: 'Uavhengig kontroll brann Ålesund | Brannkonsult AS',
-  description: 'Uavhengig kontroll av brannkonsept i Ålesund og på Sunnmøre. Sentralt godkjent foretak. Fastpris.',
+  description: 'Uavhengig kontroll av brann i Ålesund og Møre og Romsdal. Krav etter SAK10 for tiltaksklasse 2 og høyere. Sentralt godkjent — vi kontrollerer andres brannkonsept.',
   alternates: { canonical: 'https://www.aalesundbrannkonsult.no/uavhengig-kontroll' },
 }
 

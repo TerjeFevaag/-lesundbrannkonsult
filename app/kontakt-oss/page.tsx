@@ -14,7 +14,7 @@ const breadcrumbSchema = {
 
 export const metadata: Metadata = {
   title: 'Kontakt oss | Brannkonsult AS',
-  description: 'Kontakt Ålesund Brannkonsult for brannprosjektering i Ålesund og på Sunnmøre. Svar innen 24 timer.',
+  description: 'Kontakt Brannkonsult AS for brannprosjektering i Ålesund og Sunnmøre. Få fastpris innen 24 timer. Ring 973 49 273 eller send e-post — vi svarer raskt.',
   alternates: { canonical: 'https://www.aalesundbrannkonsult.no/kontakt-oss' },
 }
 
