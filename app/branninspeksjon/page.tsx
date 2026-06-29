@@ -1,4 +1,4 @@
-import type { Metadata } from 'next'
+﻿import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import ScrollReveal from '@/components/ScrollReveal'
@@ -7,7 +7,7 @@ import FAQAccordion from '@/components/FAQAccordion'
 export const metadata: Metadata = {
   title: 'Branninspeksjon i Ålesund | Brannkonsult AS',
   description: 'Branninspeksjon i Ålesund — vi inspiserer bygget og leverer tilstandsrapport og handlingsplan. Sentralt godkjent brannrådgiver. Kontakt oss for fastpris.',
-  alternates: { canonical: 'https://www.aalesundbrannkonsult.no/branninspeksjon' },
+  alternates: { canonical: 'https://www.ålesundbrannkonsult.no/branninspeksjon' },
 }
 
 const serviceSchema = {
@@ -19,7 +19,7 @@ const serviceSchema = {
   provider: {
     '@type': 'LocalBusiness',
     name: 'Ålesund Brannkonsult AS',
-    url: 'https://www.aalesundbrannkonsult.no',
+    url: 'https://www.ålesundbrannkonsult.no',
   },
   areaServed: [
     { '@type': 'City', name: 'Ålesund' },
@@ -37,8 +37,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Hjem', item: 'https://www.aalesundbrannkonsult.no' },
-    { '@type': 'ListItem', position: 2, name: 'Branninspeksjon', item: 'https://www.aalesundbrannkonsult.no/branninspeksjon' },
+    { '@type': 'ListItem', position: 1, name: 'Hjem', item: 'https://www.ålesundbrannkonsult.no' },
+    { '@type': 'ListItem', position: 2, name: 'Branninspeksjon', item: 'https://www.ålesundbrannkonsult.no/branninspeksjon' },
   ],
 }
 

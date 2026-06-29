@@ -1,14 +1,14 @@
-import type { Metadata } from 'next'
+﻿import type { Metadata } from 'next'
 import Image from 'next/image'
 
 export const metadata: Metadata = {
   title: 'Brannprosjektering i Ålesund | Brannkonsult AS',
   description: 'Sentralt godkjent brannrådgiver med over 1 200 prosjekter. Brannkonsept, brannprosjektering og branninspeksjon i Ålesund, Sunnmøre og hele Norge. Fastpris alltid.',
-  alternates: { canonical: 'https://www.aalesundbrannkonsult.no' },
+  alternates: { canonical: 'https://www.ålesundbrannkonsult.no' },
   openGraph: {
     title: 'Brannprosjektering i Ålesund | Brannkonsult AS',
     description: 'Sentralt godkjent brannrådgiver med over 1 200 prosjekter. Brannkonsept, brannprosjektering og branninspeksjon i Ålesund, Sunnmøre og hele Norge.',
-    url: 'https://www.aalesundbrannkonsult.no',
+    url: 'https://www.ålesundbrannkonsult.no',
     siteName: 'Ålesund Brannkonsult',
     locale: 'nb_NO',
     type: 'website',
@@ -99,7 +99,7 @@ const websiteSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebSite',
   name: 'Ålesund Brannkonsult',
-  url: 'https://www.aalesundbrannkonsult.no',
+  url: 'https://www.ålesundbrannkonsult.no',
 }
 
 export default function HomePage() {

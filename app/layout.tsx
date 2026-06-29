@@ -1,4 +1,4 @@
-import type { Metadata } from 'next'
+﻿import type { Metadata } from 'next'
 import { Lato, Dancing_Script } from 'next/font/google'
 import './globals.css'
 import TopBar from '@/components/TopBar'
@@ -19,18 +19,18 @@ const dancing = Dancing_Script({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://www.aalesundbrannkonsult.no'),
+  metadataBase: new URL('https://www.ålesundbrannkonsult.no'),
   title: 'Brannprosjektering i Ålesund | Brannkonsult AS',
-  description: 'Ålesund Brannkonsult tilbyr brannkonsept, brannprosjektering og branninspeksjon i Ålesund og på Sunnmøre. Sentralt godkjent foretak. Fastpris.',
-  alternates: { canonical: 'https://www.aalesundbrannkonsult.no' },
+  description: 'Sentralt godkjent brannrådgiver med over 1 200 prosjekter. Brannkonsept, brannprosjektering og branninspeksjon i Ålesund, Sunnmøre og hele Norge. Fastpris alltid.',
+  alternates: { canonical: 'https://www.ålesundbrannkonsult.no' },
   openGraph: {
     title: 'Brannprosjektering i Ålesund | Brannkonsult AS',
-    description: 'Ålesund Brannkonsult tilbyr brannkonsept, brannprosjektering og branninspeksjon i Ålesund og på Sunnmøre.',
-    url: 'https://www.aalesundbrannkonsult.no',
-    siteName: 'Ålesund Brannkonsult',
+    description: 'Sentralt godkjent brannrådgiver med over 1 200 prosjekter. Brannkonsept, brannprosjektering og branninspeksjon i Ålesund, Sunnmøre og hele Norge.',
+    url: 'https://www.ålesundbrannkonsult.no',
+    siteName: 'Brannkonsult AS',
     locale: 'nb_NO',
     type: 'website',
-    images: [{ url: '/images/hero.jpg', width: 1200, height: 630, alt: 'Ålesund Brannkonsult' }],
+    images: [{ url: '/images/hero.jpg', width: 1200, height: 630, alt: 'Brannkonsult AS – brannprosjektering i Ålesund' }],
   },
 }
 
@@ -48,11 +48,6 @@ const jsonLd = {
     postalCode: '0161',
     addressCountry: 'NO',
   },
-  geo: {
-    '@type': 'GeoCoordinates',
-    latitude: 'TODO: legg inn breddegrad',
-    longitude: 'TODO: legg inn lengdegrad',
-  },
   openingHoursSpecification: [
     {
       '@type': 'OpeningHoursSpecification',
@@ -61,11 +56,7 @@ const jsonLd = {
       closes: '16:00',
     },
   ],
-  sameAs: [
-    'TODO: legg inn Facebook-URL',
-    'TODO: legg inn LinkedIn-URL',
-  ],
-  url: 'https://www.aalesundbrannkonsult.no',
+  url: 'https://www.ålesundbrannkonsult.no',
   priceRange: 'Fra kr 15 000',
 }
 

@@ -1,4 +1,4 @@
-import type { Metadata } from 'next'
+﻿import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import ScrollReveal from '@/components/ScrollReveal'
@@ -7,16 +7,16 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Hjem', item: 'https://www.aalesundbrannkonsult.no' },
-    { '@type': 'ListItem', position: 2, name: 'Artikler', item: 'https://www.aalesundbrannkonsult.no/artikler/roykvarsler' },
-    { '@type': 'ListItem', position: 3, name: 'Riktig røykvarsler', item: 'https://www.aalesundbrannkonsult.no/artikler/roykvarsler' },
+    { '@type': 'ListItem', position: 1, name: 'Hjem', item: 'https://www.ålesundbrannkonsult.no' },
+    { '@type': 'ListItem', position: 2, name: 'Artikler', item: 'https://www.ålesundbrannkonsult.no/artikler/roykvarsler' },
+    { '@type': 'ListItem', position: 3, name: 'Riktig røykvarsler', item: 'https://www.ålesundbrannkonsult.no/artikler/roykvarsler' },
   ],
 }
 
 export const metadata: Metadata = {
   title: 'Riktig røykvarsler redder liv | Brannkonsult AS',
   description: 'Krav til røykvarslere i norske boliger og riktig plassering.',
-  alternates: { canonical: 'https://www.aalesundbrannkonsult.no/artikler/roykvarsler' },
+  alternates: { canonical: 'https://www.ålesundbrannkonsult.no/artikler/roykvarsler' },
 }
 
 export default function RoykVarslerPage() {

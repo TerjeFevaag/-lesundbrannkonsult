@@ -1,4 +1,4 @@
-import type { Metadata } from 'next'
+﻿import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import ScrollReveal from '@/components/ScrollReveal'
@@ -7,16 +7,16 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Hjem', item: 'https://www.aalesundbrannkonsult.no' },
-    { '@type': 'ListItem', position: 2, name: 'Artikler', item: 'https://www.aalesundbrannkonsult.no/artikler/brannslokker' },
-    { '@type': 'ListItem', position: 3, name: 'Riktig brannslokkeapparat', item: 'https://www.aalesundbrannkonsult.no/artikler/brannslokker' },
+    { '@type': 'ListItem', position: 1, name: 'Hjem', item: 'https://www.ålesundbrannkonsult.no' },
+    { '@type': 'ListItem', position: 2, name: 'Artikler', item: 'https://www.ålesundbrannkonsult.no/artikler/brannslokker' },
+    { '@type': 'ListItem', position: 3, name: 'Riktig brannslokkeapparat', item: 'https://www.ålesundbrannkonsult.no/artikler/brannslokker' },
   ],
 }
 
 export const metadata: Metadata = {
   title: 'Har du riktig brannslokkeapparat? | Brannkonsult AS',
   description: 'Vet du hvilken type brannslokker du trenger? Vi gjennomgår krav og typer.',
-  alternates: { canonical: 'https://www.aalesundbrannkonsult.no/artikler/brannslokker' },
+  alternates: { canonical: 'https://www.ålesundbrannkonsult.no/artikler/brannslokker' },
 }
 
 export default function BrannslokkePage() {

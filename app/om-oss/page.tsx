@@ -1,4 +1,4 @@
-import type { Metadata } from 'next'
+﻿import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import { CheckCircle } from 'lucide-react'
@@ -8,15 +8,15 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Hjem', item: 'https://www.aalesundbrannkonsult.no' },
-    { '@type': 'ListItem', position: 2, name: 'Om oss', item: 'https://www.aalesundbrannkonsult.no/om-oss' },
+    { '@type': 'ListItem', position: 1, name: 'Hjem', item: 'https://www.ålesundbrannkonsult.no' },
+    { '@type': 'ListItem', position: 2, name: 'Om oss', item: 'https://www.ålesundbrannkonsult.no/om-oss' },
   ],
 }
 
 export const metadata: Metadata = {
   title: 'Om oss | Brannkonsult AS',
   description: 'Brannkonsult AS er et sentralt godkjent brannprosjekteringsfirma med over 1 200 prosjekter siden 2013. Nøytral rådgiver uten produktsalg — i Ålesund og over hele Norge.',
-  alternates: { canonical: 'https://www.aalesundbrannkonsult.no/om-oss' },
+  alternates: { canonical: 'https://www.ålesundbrannkonsult.no/om-oss' },
 }
 
 export default function OmOssPage() {
@@ -59,7 +59,7 @@ export default function OmOssPage() {
                   </ul>
                 </div>
                 <div className="relative rounded-[20px] overflow-hidden h-72 lg:h-96">
-                  <Image src="/images/Om-oss.jpg" alt="Teamet i Ålesund Brannkonsult" fill className="object-cover" sizes="(max-width:1024px) 100vw, 50vw" />
+                  <Image src="/images/Om-oss.jpg" alt="Teamet i Brannkonsult AS" fill className="object-cover" sizes="(max-width:1024px) 100vw, 50vw" />
                 </div>
               </div>
             </div>

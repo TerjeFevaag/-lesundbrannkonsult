@@ -1,4 +1,4 @@
-import type { Metadata } from 'next'
+﻿import type { Metadata } from 'next'
 import { Phone, Mail, MapPin, Clock } from 'lucide-react'
 import ScrollReveal from '@/components/ScrollReveal'
 import ContactForm from '@/components/ContactForm'
@@ -7,15 +7,15 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Hjem', item: 'https://www.aalesundbrannkonsult.no' },
-    { '@type': 'ListItem', position: 2, name: 'Kontakt oss', item: 'https://www.aalesundbrannkonsult.no/kontakt-oss' },
+    { '@type': 'ListItem', position: 1, name: 'Hjem', item: 'https://www.ålesundbrannkonsult.no' },
+    { '@type': 'ListItem', position: 2, name: 'Kontakt oss', item: 'https://www.ålesundbrannkonsult.no/kontakt-oss' },
   ],
 }
 
 export const metadata: Metadata = {
   title: 'Kontakt oss | Brannkonsult AS',
   description: 'Kontakt Brannkonsult AS for brannprosjektering i Ålesund og Sunnmøre. Få fastpris innen 24 timer. Ring 973 49 273 eller send e-post — vi svarer raskt.',
-  alternates: { canonical: 'https://www.aalesundbrannkonsult.no/kontakt-oss' },
+  alternates: { canonical: 'https://www.ålesundbrannkonsult.no/kontakt-oss' },
 }
 
 export default function KontaktOssPage() {

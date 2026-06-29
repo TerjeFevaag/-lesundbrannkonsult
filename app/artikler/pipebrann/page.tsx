@@ -1,4 +1,4 @@
-import type { Metadata } from 'next'
+﻿import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import ScrollReveal from '@/components/ScrollReveal'
@@ -7,16 +7,16 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Hjem', item: 'https://www.aalesundbrannkonsult.no' },
-    { '@type': 'ListItem', position: 2, name: 'Artikler', item: 'https://www.aalesundbrannkonsult.no/artikler/pipebrann' },
-    { '@type': 'ListItem', position: 3, name: 'Forebygg pipebrann', item: 'https://www.aalesundbrannkonsult.no/artikler/pipebrann' },
+    { '@type': 'ListItem', position: 1, name: 'Hjem', item: 'https://www.ålesundbrannkonsult.no' },
+    { '@type': 'ListItem', position: 2, name: 'Artikler', item: 'https://www.ålesundbrannkonsult.no/artikler/pipebrann' },
+    { '@type': 'ListItem', position: 3, name: 'Forebygg pipebrann', item: 'https://www.ålesundbrannkonsult.no/artikler/pipebrann' },
   ],
 }
 
 export const metadata: Metadata = {
   title: 'Forebygg pipebrann med enkle grep | Brannkonsult AS',
   description: 'Er du i faresonen for pipebrann? Vi forklarer hva som forårsaker den og hva du kan gjøre.',
-  alternates: { canonical: 'https://www.aalesundbrannkonsult.no/artikler/pipebrann' },
+  alternates: { canonical: 'https://www.ålesundbrannkonsult.no/artikler/pipebrann' },
 }
 
 export default function PipebrannPage() {

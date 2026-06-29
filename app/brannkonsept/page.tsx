@@ -1,4 +1,4 @@
-import type { Metadata } from 'next'
+﻿import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import { CheckCircle } from 'lucide-react'
@@ -14,7 +14,7 @@ const serviceSchema = {
   provider: {
     '@type': 'LocalBusiness',
     name: 'Ålesund Brannkonsult AS',
-    url: 'https://www.aalesundbrannkonsult.no',
+    url: 'https://www.ålesundbrannkonsult.no',
   },
   areaServed: [
     { '@type': 'City', name: 'Ålesund' },
@@ -37,15 +37,15 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Hjem', item: 'https://www.aalesundbrannkonsult.no' },
-    { '@type': 'ListItem', position: 2, name: 'Brannkonsept', item: 'https://www.aalesundbrannkonsult.no/brannkonsept' },
+    { '@type': 'ListItem', position: 1, name: 'Hjem', item: 'https://www.ålesundbrannkonsult.no' },
+    { '@type': 'ListItem', position: 2, name: 'Brannkonsept', item: 'https://www.ålesundbrannkonsult.no/brannkonsept' },
   ],
 }
 
 export const metadata: Metadata = {
   title: 'Brannkonsept i Ålesund | Brannkonsult AS',
   description: 'Brannkonsept i Ålesund ihht. TEK17 — for tilbygg, nybygg og bruksendring. Sentralt godkjent foretak med 1 200+ prosjekter. Fastpris fra kr 15 000 ekskl. mva.',
-  alternates: { canonical: 'https://www.aalesundbrannkonsult.no/brannkonsept' },
+  alternates: { canonical: 'https://www.ålesundbrannkonsult.no/brannkonsept' },
 }
 
 const faqItems = [

@@ -1,4 +1,4 @@
-import type { Metadata } from 'next'
+﻿import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import { CheckCircle } from 'lucide-react'
@@ -14,7 +14,7 @@ const serviceSchema = {
   provider: {
     '@type': 'LocalBusiness',
     name: 'Ålesund Brannkonsult AS',
-    url: 'https://www.aalesundbrannkonsult.no',
+    url: 'https://www.ålesundbrannkonsult.no',
   },
   areaServed: [
     { '@type': 'City', name: 'Ålesund' },
@@ -32,15 +32,15 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Hjem', item: 'https://www.aalesundbrannkonsult.no' },
-    { '@type': 'ListItem', position: 2, name: 'Uavhengig kontroll', item: 'https://www.aalesundbrannkonsult.no/uavhengig-kontroll' },
+    { '@type': 'ListItem', position: 1, name: 'Hjem', item: 'https://www.ålesundbrannkonsult.no' },
+    { '@type': 'ListItem', position: 2, name: 'Uavhengig kontroll', item: 'https://www.ålesundbrannkonsult.no/uavhengig-kontroll' },
   ],
 }
 
 export const metadata: Metadata = {
   title: 'Uavhengig kontroll brann Ålesund | Brannkonsult AS',
   description: 'Uavhengig kontroll av brann i Ålesund og Møre og Romsdal. Krav etter SAK10 for tiltaksklasse 2 og høyere. Sentralt godkjent — vi kontrollerer andres brannkonsept.',
-  alternates: { canonical: 'https://www.aalesundbrannkonsult.no/uavhengig-kontroll' },
+  alternates: { canonical: 'https://www.ålesundbrannkonsult.no/uavhengig-kontroll' },
 }
 
 const faqItems = [

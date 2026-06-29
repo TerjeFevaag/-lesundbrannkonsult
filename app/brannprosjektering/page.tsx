@@ -1,4 +1,4 @@
-import type { Metadata } from 'next'
+﻿import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import { CheckCircle } from 'lucide-react'
@@ -14,7 +14,7 @@ const serviceSchema = {
   provider: {
     '@type': 'LocalBusiness',
     name: 'Ålesund Brannkonsult AS',
-    url: 'https://www.aalesundbrannkonsult.no',
+    url: 'https://www.ålesundbrannkonsult.no',
   },
   areaServed: [
     { '@type': 'City', name: 'Ålesund' },
@@ -37,15 +37,15 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Hjem', item: 'https://www.aalesundbrannkonsult.no' },
-    { '@type': 'ListItem', position: 2, name: 'Brannprosjektering', item: 'https://www.aalesundbrannkonsult.no/brannprosjektering' },
+    { '@type': 'ListItem', position: 1, name: 'Hjem', item: 'https://www.ålesundbrannkonsult.no' },
+    { '@type': 'ListItem', position: 2, name: 'Brannprosjektering', item: 'https://www.ålesundbrannkonsult.no/brannprosjektering' },
   ],
 }
 
 export const metadata: Metadata = {
   title: 'Brannprosjektering i Ålesund | Brannkonsult AS',
   description: 'Brannprosjektering i Ålesund for tilbygg, nybygg og bruksendring. Sentralt godkjent rådgiver med 1 200+ prosjekter. Fastpris alltid — svar innen 24 timer.',
-  alternates: { canonical: 'https://www.aalesundbrannkonsult.no/brannprosjektering' },
+  alternates: { canonical: 'https://www.ålesundbrannkonsult.no/brannprosjektering' },
 }
 
 const faqItems = [

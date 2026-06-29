@@ -1,6 +1,6 @@
-import { MetadataRoute } from 'next'
+﻿import { MetadataRoute } from 'next'
 
-const BASE_URL = 'https://www.aalesundbrannkonsult.no'
+const BASE_URL = 'https://www.ålesundbrannkonsult.no'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
