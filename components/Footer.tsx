@@ -65,6 +65,12 @@ export default function Footer() {
         {/* Copyright */}
         <div className="border-t border-brand-white/10 py-5 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-brand-white/40 text-xs">&copy; {new Date().getFullYear()} Brannkonsult AS. Alle rettigheter forbeholdt.</p>
+          <p className="text-brand-white/30 text-xs">
+            Utviklet av{' '}
+            <a href="https://fevaag.no/" target="_blank" rel="noopener noreferrer" className="hover:text-brand-orange transition-colors">
+              Fevaag Web Consulting
+            </a>
+          </p>
           <Image src="/images/sentralt-godkjent.png" alt="Sentralt godkjent" width={80} height={80} className="object-contain" />
         </div>
       </div>
