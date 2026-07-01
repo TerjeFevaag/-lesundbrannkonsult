@@ -26,9 +26,8 @@ export default function FAQAccordion({ items, dark = false }: { items: FAQItem[]
             <div className="overflow-hidden transition-[grid-template-rows] duration-300 ease-in-out"
               style={{ display: 'grid', gridTemplateRows: isOpen ? '1fr' : '0fr' }}>
               <div className="min-h-0">
-                <div className={`mt-4 leading-relaxed text-base pr-8 pb-1 ${dark ? 'text-brand-white/70' : 'text-brand-darkgray'}`}>
-                  {item.answer}
-                </div>
+                <div className={`mt-4 leading-relaxed text-base pr-8 pb-1 ${dark ? 'text-brand-white/70' : 'text-brand-darkgray'}`}
+                  dangerouslySetInnerHTML={{ __html: item.answer }} />
               </div>
             </div>
           </div>

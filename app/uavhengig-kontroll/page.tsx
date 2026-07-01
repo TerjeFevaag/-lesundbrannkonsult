@@ -49,6 +49,7 @@ const faqItems = [
   { question: 'Hva koster uavhengig kontroll?', answer: 'Avhengig av byggets størrelse og tiltaksklasse. Kontakt oss for fastpris — vi betjener prosjekter i Ålesund, på Sunnmøre og i hele Norge.' },
   { question: 'Kan dere ta UK uten å ha prosjektert?', answer: 'Ja, vi tar oppdrag som kontrollerende for brannkonsept vi ikke har utarbeidet.' },
   { question: 'Tar dere oppdrag utenfor Ålesund og Sunnmøre?', answer: 'Ja, vi gjennomfører uavhengig kontroll over hele landet. Ålesund er basen vår, men vi bistår prosjekter i Møre og Romsdal, på Vestlandet og ellers i Norge.' },
+  { question: 'Hvor kan jeg lese mer om regelverket for uavhengig kontroll?', answer: 'brannkonsult.no har en utfyllende gjennomgang av <a href="https://www.brannkonsult.no/uavhengig-kontroll/" class="underline">kravene til uavhengig kontroll av brann etter SAK10</a>.' },
 ]
 
 export default function UavhengigKontrollPage() {
@@ -83,7 +84,7 @@ export default function UavhengigKontrollPage() {
                 ))}
               </ul>
               <p className="text-brand-darkgray leading-relaxed">
-                Vi er en nøytral part — selger ingen produkter. Kontrollen avsluttes med skriftlig rapport og erklæring om ansvarsrett, i henhold til <a href="https://www.brannkonsult.no/uavhengig-kontroll/" className="text-brand-orange hover:underline">reglene om uavhengig kontroll i SAK10</a>. Kontakt oss for fastpris basert på byggets størrelse og tiltaksklasse.
+                Vi er en nøytral part — selger ingen produkter. Kontrollen avsluttes med skriftlig rapport og erklæring om ansvarsrett. Kontakt oss for fastpris basert på byggets størrelse og tiltaksklasse.
               </p>
             </div>
           </ScrollReveal>

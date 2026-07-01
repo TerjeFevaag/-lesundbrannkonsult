@@ -48,6 +48,7 @@ const faqItems = [
   { question: 'Hva koster en branninspeksjon i Ålesund?', answer: 'Prisen avhenger av byggets størrelse. Kontakt oss for fastpris — vi betjener kunder i Ålesund, på Sunnmøre og i hele Norge.' },
   { question: 'Utfører dere branninspeksjon utenfor Ålesund?', answer: 'Ja, vi tar oppdrag i hele landet. Vi er basert i Ålesund, men rykker ut til Sunnmøre, Møre og Romsdal og resten av Norge ved behov.' },
   { question: 'Gjelder oppgraderingskravet for alle eldre bygninger?', answer: 'Ja, alle bygg skal ha brannsikkerhet tilsvarende BF85 eller bedre.' },
+  { question: 'Hvor finner jeg mer informasjon om branninspeksjon?', answer: 'brannkonsult.no har samlet faglig informasjon om <a href="https://www.brannkonsult.no/branninspeksjon/" class="underline">hva en branninspeksjon innebærer</a>, inkludert hva du kan forvente av rapport og handlingsplan.' },
 ]
 
 export default function BranninspeksjonPage() {
@@ -73,7 +74,7 @@ export default function BranninspeksjonPage() {
           <ScrollReveal>
             <div className="bg-brand-white rounded-[30px] p-8 lg:p-12 border border-brand-gray">
               <h2 className="text-brand-black text-2xl font-black mb-5">Vår branninspeksjonstjeneste</h2>
-              <p className="text-brand-darkgray leading-relaxed mb-6">Vi tilbyr en grundig gjennomgang av byggets brannsikkerhet — uavhengig av om du har fått pålegg. En <a href="https://www.brannkonsult.no/branninspeksjon/" className="text-brand-orange hover:underline">branninspeksjon fra privat rådgiver</a> skiller seg fra det kommunale branntilsynet ved at du selv bestiller den og får en skriftlig tilstandsrapport med prioritert handlingsplan.</p>
+              <p className="text-brand-darkgray leading-relaxed mb-6">Vi tilbyr en grundig gjennomgang av byggets brannsikkerhet — uavhengig av om du har fått pålegg.</p>
               <div className="space-y-5">
                 {[
                   { step: '01', title: 'Inspeksjon', desc: 'Vi gjennomgår bygget fysisk og vurderer alle branntekniske tiltak.' },

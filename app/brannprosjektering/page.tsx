@@ -54,6 +54,7 @@ const faqItems = [
   { question: 'Tar dere oppdrag utenfor Ålesund?', answer: 'Ja, vi leverer brannprosjektering i hele Norge. Ålesund og Sunnmøre er basen vår, men vi bistår prosjekter i Møre og Romsdal, på Vestlandet og ellers i landet. De fleste saker løses digitalt uten befaring.' },
   { question: 'Er befaring nødvendig?', answer: 'Vanligvis ikke. Digitale tegninger er som regel tilstrekkelig — noe som gjør det enkelt å jobbe med oss uansett hvor prosjektet er.' },
   { question: 'Hva trenger dere for pristilbud?', answer: 'Adresse, plantegninger og en kort prosjektbeskrivelse. Vi svarer med fastpris innen 24 timer.' },
+  { question: 'Hvor kan jeg lese mer om brannprosjektering som fag?', answer: 'brannkonsult.no har en grundig <a href="https://www.brannkonsult.no/brannprosjektering/" class="underline">faginnføring i brannprosjektering</a> som forklarer regelverk, krav og prosess.' },
 ]
 
 export default function BrannprosjekteringPage() {
@@ -89,7 +90,7 @@ export default function BrannprosjekteringPage() {
               </ul>
               <h3 className="text-brand-black font-bold text-lg mb-3">Start tidlig — spar penger</h3>
               <p className="text-brand-darkgray leading-relaxed">
-                Jo tidligere vi kobles inn, jo enklere og billigere er det å finne gode branntekniske løsninger. Kontakt oss allerede i skissefasen. Vi betjener Ålesund, Ørsta, Volda, Stranda, Sykkylven og hele Møre og Romsdal. Vil du lese mer om fagfeltet, har brannkonsult.no en grundig <a href="https://www.brannkonsult.no/brannprosjektering/" className="text-brand-orange hover:underline">innføring i brannprosjektering</a>.
+                Jo tidligere vi kobles inn, jo enklere og billigere er det å finne gode branntekniske løsninger. Kontakt oss allerede i skissefasen. Vi betjener Ålesund, Ørsta, Volda, Stranda, Sykkylven og hele Møre og Romsdal.
               </p>
             </div>
           </ScrollReveal>

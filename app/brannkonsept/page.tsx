@@ -51,7 +51,7 @@ export const metadata: Metadata = {
 const faqItems = [
   {
     question: 'Hva er et brannkonsept?',
-    answer: 'Et brannkonsept er en helhetlig plan for brannsikkerheten i et bygg — risikoklasse, brannklasse, brannceller, rømning og slokkesystem.',
+    answer: 'Et brannkonsept er en helhetlig plan for brannsikkerheten i et bygg — risikoklasse, brannklasse, brannceller, rømning og slokkesystem. Du finner en utfyllende faglig gjennomgang av kravene i <a href="https://www.brannkonsult.no/brannkonsept/" class="underline">veileder for brannkonsept</a> på brannkonsult.no.',
   },
   {
     question: 'Hva koster et brannkonsept i Ålesund?',
@@ -93,7 +93,7 @@ export default function BrannkonseptPage() {
             <div className="bg-brand-white rounded-[30px] p-8 lg:p-12 border border-brand-gray">
               <h2 className="text-brand-black text-2xl font-black mb-5">Hva inkluderer brannkonseptet?</h2>
               <p className="text-brand-darkgray leading-relaxed mb-6">
-                Et brannkonsept er et strategidokument for brannsikkerheten i byggeprosjektet. Det dokumenterer at bygget oppfyller kravene i TEK17 — fra risikoklasse og branncelleinndeling til røykventilasjon og rømningsveier. For en fullstendig gjennomgang av hva dokumentet skal inneholde, se <a href="https://www.brannkonsult.no/brannkonsept/" className="text-brand-orange hover:underline">fagveileder for brannkonsept</a> på brannkonsult.no.
+                Et brannkonsept er et strategidokument for brannsikkerheten i byggeprosjektet. Det dokumenterer at bygget oppfyller kravene i TEK17 — fra risikoklasse og branncelleinndeling til røykventilasjon og rømningsveier.
               </p>
               <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 {['Risikoklasse og brannklasse', 'Branncelleinndeling', 'Rømningsveier', 'Bærende konstruksjoner', 'Røykventilasjon', 'Slokkesystem', 'Dokumentasjon til byggesøknaden', 'Støtte mot kommunens saksbehandler'].map((item, i) => (
