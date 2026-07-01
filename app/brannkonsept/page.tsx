@@ -93,7 +93,7 @@ export default function BrannkonseptPage() {
             <div className="bg-brand-white rounded-[30px] p-8 lg:p-12 border border-brand-gray">
               <h2 className="text-brand-black text-2xl font-black mb-5">Hva inkluderer brannkonseptet?</h2>
               <p className="text-brand-darkgray leading-relaxed mb-6">
-                Et brannkonsept er et strategidokument for brannsikkerheten i byggeprosjektet. Det dokumenterer at bygget oppfyller kravene i TEK17 — fra risikoklasse og branncelleinndeling til røykventilasjon og rømningsveier.
+                Et brannkonsept er et strategidokument for brannsikkerheten i byggeprosjektet. Det dokumenterer at bygget oppfyller kravene i TEK17 — fra risikoklasse og branncelleinndeling til røykventilasjon og rømningsveier. For en fullstendig gjennomgang av hva dokumentet skal inneholde, se <a href="https://www.brannkonsult.no/brannkonsept/" className="text-brand-orange hover:underline">fagveileder for brannkonsept</a> på brannkonsult.no.
               </p>
               <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 {['Risikoklasse og brannklasse', 'Branncelleinndeling', 'Rømningsveier', 'Bærende konstruksjoner', 'Røykventilasjon', 'Slokkesystem', 'Dokumentasjon til byggesøknaden', 'Støtte mot kommunens saksbehandler'].map((item, i) => (

@@ -73,7 +73,7 @@ export default function BranninspeksjonPage() {
           <ScrollReveal>
             <div className="bg-brand-white rounded-[30px] p-8 lg:p-12 border border-brand-gray">
               <h2 className="text-brand-black text-2xl font-black mb-5">Vår branninspeksjonstjeneste</h2>
-              <p className="text-brand-darkgray leading-relaxed mb-6">Vi tilbyr en grundig gjennomgang av byggets brannsikkerhet — uavhengig av om du har fått pålegg.</p>
+              <p className="text-brand-darkgray leading-relaxed mb-6">Vi tilbyr en grundig gjennomgang av byggets brannsikkerhet — uavhengig av om du har fått pålegg. En <a href="https://www.brannkonsult.no/branninspeksjon/" className="text-brand-orange hover:underline">branninspeksjon fra privat rådgiver</a> skiller seg fra det kommunale branntilsynet ved at du selv bestiller den og får en skriftlig tilstandsrapport med prioritert handlingsplan.</p>
               <div className="space-y-5">
                 {[
                   { step: '01', title: 'Inspeksjon', desc: 'Vi gjennomgår bygget fysisk og vurderer alle branntekniske tiltak.' },

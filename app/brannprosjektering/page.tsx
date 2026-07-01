@@ -89,7 +89,7 @@ export default function BrannprosjekteringPage() {
               </ul>
               <h3 className="text-brand-black font-bold text-lg mb-3">Start tidlig — spar penger</h3>
               <p className="text-brand-darkgray leading-relaxed">
-                Jo tidligere vi kobles inn, jo enklere og billigere er det å finne gode branntekniske løsninger. Kontakt oss allerede i skissefasen. Vi betjener Ålesund, Ørsta, Volda, Stranda, Sykkylven og hele Møre og Romsdal.
+                Jo tidligere vi kobles inn, jo enklere og billigere er det å finne gode branntekniske løsninger. Kontakt oss allerede i skissefasen. Vi betjener Ålesund, Ørsta, Volda, Stranda, Sykkylven og hele Møre og Romsdal. Vil du lese mer om fagfeltet, har brannkonsult.no en grundig <a href="https://www.brannkonsult.no/brannprosjektering/" className="text-brand-orange hover:underline">innføring i brannprosjektering</a>.
               </p>
             </div>
           </ScrollReveal>

@@ -83,7 +83,7 @@ export default function UavhengigKontrollPage() {
                 ))}
               </ul>
               <p className="text-brand-darkgray leading-relaxed">
-                Vi er en nøytral part — selger ingen produkter. Kontrollen avsluttes med skriftlig rapport og erklæring om ansvarsrett. Kontakt oss for fastpris basert på byggets størrelse og tiltaksklasse.
+                Vi er en nøytral part — selger ingen produkter. Kontrollen avsluttes med skriftlig rapport og erklæring om ansvarsrett, i henhold til <a href="https://www.brannkonsult.no/uavhengig-kontroll/" className="text-brand-orange hover:underline">reglene om uavhengig kontroll i SAK10</a>. Kontakt oss for fastpris basert på byggets størrelse og tiltaksklasse.
               </p>
             </div>
           </ScrollReveal>
