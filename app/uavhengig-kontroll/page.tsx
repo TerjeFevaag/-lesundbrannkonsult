@@ -49,7 +49,7 @@ const faqItems = [
   { question: 'Hva koster uavhengig kontroll?', answer: 'Avhengig av byggets størrelse og tiltaksklasse. Kontakt oss for fastpris — vi betjener prosjekter i Ålesund, på Sunnmøre og i hele Norge.' },
   { question: 'Kan dere ta UK uten å ha prosjektert?', answer: 'Ja, vi tar oppdrag som kontrollerende for brannkonsept vi ikke har utarbeidet.' },
   { question: 'Tar dere oppdrag utenfor Ålesund og Sunnmøre?', answer: 'Ja, vi gjennomfører uavhengig kontroll over hele landet. Ålesund er basen vår, men vi bistår prosjekter i Møre og Romsdal, på Vestlandet og ellers i Norge.' },
-  { question: 'Hvor kan jeg lese mer om regelverket for uavhengig kontroll?', answer: 'brannkonsult.no har en utfyllende gjennomgang av <a href="https://www.brannkonsult.no/uavhengig-kontroll/" class="underline">kravene til uavhengig kontroll av brann etter SAK10</a>.' },
+  { question: 'Hvor kan jeg lese mer om regelverket for uavhengig kontroll?', answer: 'brannkonsult.no har en utfyllende gjennomgang av <a href="https://www.brannkonsult.no/uavhengig-kontroll-brannkonsept/" class="underline">kravene til uavhengig kontroll av brann etter SAK10</a>.' },
 ]
 
 export default function UavhengigKontrollPage() {
