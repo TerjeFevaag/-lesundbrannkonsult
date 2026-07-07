@@ -13,7 +13,7 @@ const serviceSchema = {
   description: 'Brannprosjektering for tilbygg, nybygg, bruksendring og rehabilitering i Ålesund og på Sunnmøre. Fastpris alltid.',
   provider: {
     '@type': 'LocalBusiness',
-    name: 'Ålesund Brannkonsult AS',
+    name: 'Brannkonsult AS',
     url: 'https://www.ålesundbrannkonsult.no',
   },
   areaServed: [

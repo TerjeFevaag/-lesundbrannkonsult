@@ -13,7 +13,7 @@ const serviceSchema = {
   description: 'Uavhengig kontroll av brannkonsept i tiltaksklasse 2 og høyere. Sentralt godkjent foretak i Ålesund og Møre og Romsdal.',
   provider: {
     '@type': 'LocalBusiness',
-    name: 'Ålesund Brannkonsult AS',
+    name: 'Brannkonsult AS',
     url: 'https://www.ålesundbrannkonsult.no',
   },
   areaServed: [

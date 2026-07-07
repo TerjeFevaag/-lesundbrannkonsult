@@ -37,7 +37,7 @@ export const metadata: Metadata = {
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': ['LocalBusiness', 'ProfessionalService'],
-  name: 'Ålesund Brannkonsult AS',
+  name: 'Brannkonsult AS',
   description: 'Brannprosjektering, brannkonsept og branninspeksjon i Ålesund og på Sunnmøre. Sentralt godkjent foretak.',
   telephone: '+4797349273',
   email: 'post@ålesundbrannkonsult.no',

@@ -13,7 +13,7 @@ const serviceSchema = {
   description: 'Helhetlig brannkonsept for byggesaker i Ålesund og på Sunnmøre. Dokumenterer brannsikkerhet i henhold til TEK17.',
   provider: {
     '@type': 'LocalBusiness',
-    name: 'Ålesund Brannkonsult AS',
+    name: 'Brannkonsult AS',
     url: 'https://www.ålesundbrannkonsult.no',
   },
   areaServed: [

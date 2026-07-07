@@ -18,7 +18,7 @@ const serviceSchema = {
   description: 'Frivillig gjennomgang av byggets brannsikkerhet med tilstandsrapport og handlingsplan. Utføres av sentralt godkjent brannrådgiver.',
   provider: {
     '@type': 'LocalBusiness',
-    name: 'Ålesund Brannkonsult AS',
+    name: 'Brannkonsult AS',
     url: 'https://www.ålesundbrannkonsult.no',
   },
   areaServed: [

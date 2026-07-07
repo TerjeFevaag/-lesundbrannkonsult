@@ -9,10 +9,10 @@ export const metadata: Metadata = {
     title: 'Brannprosjektering i Ålesund | Brannkonsult AS',
     description: 'Sentralt godkjent brannrådgiver med over 1 200 prosjekter. Brannkonsept, brannprosjektering og branninspeksjon i Ålesund, Sunnmøre og hele Norge.',
     url: 'https://www.ålesundbrannkonsult.no',
-    siteName: 'Ålesund Brannkonsult',
+    siteName: 'Brannkonsult AS',
     locale: 'nb_NO',
     type: 'website',
-    images: [{ url: '/images/hero.jpg', width: 1200, height: 630, alt: 'Ålesund Brannkonsult' }],
+    images: [{ url: '/images/hero.jpg', width: 1200, height: 630, alt: 'Brannkonsult AS – brannprosjektering i Ålesund' }],
   },
 }
 import Link from 'next/link'
@@ -98,7 +98,7 @@ const faqItems = [
 const websiteSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebSite',
-  name: 'Ålesund Brannkonsult',
+  name: 'Brannkonsult AS',
   url: 'https://www.ålesundbrannkonsult.no',
 }
 

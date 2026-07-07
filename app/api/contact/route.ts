@@ -14,8 +14,8 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: 'Mangler påkrevde felter' }, { status: 400 })
     }
 
-    const sentFrom = new Sender('post@xn--lesundbrannkonsult-3tb.no', 'Ålesund Brannkonsult')
-    const recipients = [new Recipient('post@xn--lesundbrannkonsult-3tb.no', 'Ålesund Brannkonsult')]
+    const sentFrom = new Sender('post@xn--lesundbrannkonsult-3tb.no', 'Brannkonsult AS')
+    const recipients = [new Recipient('post@xn--lesundbrannkonsult-3tb.no', 'Brannkonsult AS')]
 
     const emailParams = new EmailParams()
       .setFrom(sentFrom)
