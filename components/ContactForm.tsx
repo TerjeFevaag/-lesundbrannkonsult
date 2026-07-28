@@ -9,7 +9,7 @@ type Status = 'idle' | 'uploading' | 'sending' | 'success' | 'error'
 const MAX_FILES = 4
 const MAX_FILE_MB = 20
 const MAX_FILE_BYTES = MAX_FILE_MB * 1024 * 1024
-const ACCEPTED = '.pdf,.jpg,.jpeg,.png,.gif,.webp,.dwg,.dxf'
+const ACCEPTED = '.pdf,.jpg,.jpeg,.png,.gif,.webp,.dwg,.dxf,.doc,.docx'
 
 function formatSize(bytes: number) {
   if (bytes < 1024 * 1024) return `${(bytes / 1024).toFixed(0)} KB`
@@ -161,7 +161,7 @@ export default function ContactForm() {
           onClick={(e) => { (e.target as HTMLInputElement).value = '' }}
         />
         <p className="text-brand-darkgray text-xs mt-1.5">
-          PDF, JPG, PNG, DWG, DXF — maks {MAX_FILE_MB} MB per fil, opptil {MAX_FILES} filer
+          PDF, JPG, PNG, DWG, DXF, DOC, DOCX — maks {MAX_FILE_MB} MB per fil, opptil {MAX_FILES} filer
         </p>
 
         {files.length > 0 && (

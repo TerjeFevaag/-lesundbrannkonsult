@@ -12,6 +12,8 @@ export async function POST(request: Request): Promise<Response> {
           'application/pdf',
           'image/jpeg', 'image/jpg', 'image/png', 'image/gif', 'image/webp',
           'application/octet-stream', // DWG, DXF og andre binærfiler
+          'application/msword',
+          'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
         ],
         maximumSizeInBytes: 20 * 1024 * 1024, // 20 MB per fil
       }),
