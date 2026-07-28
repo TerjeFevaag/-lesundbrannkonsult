@@ -1,4 +1,4 @@
-'use client'
+﻿'use client'
 
 import { useState } from 'react'
 
@@ -77,7 +77,7 @@ export default function ContactForm() {
       </div>
 
       {status === 'error' && (
-        <p className="text-red-600 text-sm">Noe gikk galt. Prøv igjen eller send e-post direkte til post@ålesundbrannkonsult.no.</p>
+        <p className="text-red-600 text-sm">Noe gikk galt. Prøv igjen eller send e-post direkte til post@alesundbrannkonsult.no.</p>
       )}
 
       <button type="submit" disabled={status === 'sending'} className="w-full bg-brand-orange text-brand-white font-bold px-8 py-4 rounded-[10px] hover:opacity-90 transition-opacity text-base disabled:opacity-60">

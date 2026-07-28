@@ -40,7 +40,7 @@ const jsonLd = {
   name: 'Brannkonsult AS',
   description: 'Brannprosjektering, brannkonsept og branninspeksjon i Ålesund og på Sunnmøre. Sentralt godkjent foretak.',
   telephone: '+4797349273',
-  email: 'post@ålesundbrannkonsult.no',
+  email: 'post@alesundbrannkonsult.no',
   address: {
     '@type': 'PostalAddress',
     streetAddress: 'Haakon VII\'s gate 6',
