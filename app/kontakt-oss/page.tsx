@@ -40,7 +40,7 @@ export default function KontaktOssPage() {
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-8">
             <ScrollReveal className="lg:col-span-3">
               <div className="bg-brand-white rounded-[30px] p-8 lg:p-10 border border-brand-gray">
-                <h2 className="text-brand-black text-2xl font-black mb-8">Send oss en forespørsel</h2>
+                <h2 className="text-brand-black text-2xl font-black mb-8">Få uforpliktende tilbud</h2>
                 <ContactForm />
               </div>
             </ScrollReveal>
