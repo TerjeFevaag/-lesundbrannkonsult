@@ -5,8 +5,8 @@ import { Paperclip, X, Upload } from 'lucide-react'
 
 type Status = 'idle' | 'sending' | 'success' | 'error'
 
-const MAX_FILES = 5
-const MAX_FILE_MB = 5
+const MAX_FILES = 4
+const MAX_FILE_MB = 4
 const MAX_FILE_BYTES = MAX_FILE_MB * 1024 * 1024
 const ACCEPTED = '.pdf,.jpg,.jpeg,.png,.gif,.webp,.dwg,.dxf'
 
