@@ -1,34 +1,71 @@
-﻿'use client'
+'use client'
 
-import { useState } from 'react'
+import { useState, useRef } from 'react'
+import { Paperclip, X, Upload } from 'lucide-react'
 
 type Status = 'idle' | 'sending' | 'success' | 'error'
 
+const MAX_FILES = 5
+const MAX_FILE_MB = 5
+const MAX_FILE_BYTES = MAX_FILE_MB * 1024 * 1024
+const ACCEPTED = '.pdf,.jpg,.jpeg,.png,.gif,.webp,.dwg,.dxf'
+
+function formatSize(bytes: number) {
+  if (bytes < 1024) return `${bytes} B`
+  if (bytes < 1024 * 1024) return `${(bytes / 1024).toFixed(0)} KB`
+  return `${(bytes / (1024 * 1024)).toFixed(1)} MB`
+}
+
 export default function ContactForm() {
   const [status, setStatus] = useState<Status>('idle')
+  const [files, setFiles] = useState<File[]>([])
+  const [fileError, setFileError] = useState('')
+  const fileInputRef = useRef<HTMLInputElement>(null)
+
+  function addFiles(incoming: FileList | null) {
+    if (!incoming) return
+    setFileError('')
+    const next = [...files]
+    for (const file of Array.from(incoming)) {
+      if (next.length >= MAX_FILES) {
+        setFileError(`Maks ${MAX_FILES} filer tillatt.`)
+        break
+      }
+      if (file.size > MAX_FILE_BYTES) {
+        setFileError(`«${file.name}» er for stor (maks ${MAX_FILE_MB} MB per fil).`)
+        continue
+      }
+      if (!next.find((f) => f.name === file.name && f.size === file.size)) {
+        next.push(file)
+      }
+    }
+    setFiles(next)
+  }
+
+  function removeFile(index: number) {
+    setFiles(files.filter((_, i) => i !== index))
+    setFileError('')
+  }
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault()
     setStatus('sending')
 
     const form = e.currentTarget
-    const data = {
-      navn: (form.elements.namedItem('navn') as HTMLInputElement).value,
-      epost: (form.elements.namedItem('epost') as HTMLInputElement).value,
-      telefon: (form.elements.namedItem('telefon') as HTMLInputElement).value,
-      prosjekttype: (form.elements.namedItem('prosjekttype') as HTMLSelectElement).value,
-      melding: (form.elements.namedItem('melding') as HTMLTextAreaElement).value,
-    }
+    const fd = new FormData()
+    fd.append('navn', (form.elements.namedItem('navn') as HTMLInputElement).value)
+    fd.append('epost', (form.elements.namedItem('epost') as HTMLInputElement).value)
+    fd.append('telefon', (form.elements.namedItem('telefon') as HTMLInputElement).value)
+    fd.append('prosjekttype', (form.elements.namedItem('prosjekttype') as HTMLSelectElement).value)
+    fd.append('melding', (form.elements.namedItem('melding') as HTMLTextAreaElement).value)
+    files.forEach((f) => fd.append('vedlegg', f))
 
     try {
-      const res = await fetch('/api/contact', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(data),
-      })
+      const res = await fetch('/api/contact', { method: 'POST', body: fd })
       if (!res.ok) throw new Error()
       setStatus('success')
       form.reset()
+      setFiles([])
     } catch {
       setStatus('error')
     }
@@ -74,6 +111,53 @@ export default function ContactForm() {
       <div>
         <label htmlFor="melding" className="block text-sm font-bold text-brand-black mb-1.5">Melding *</label>
         <textarea id="melding" name="melding" required rows={5} className="w-full px-4 py-3 border border-brand-gray rounded-[10px] text-brand-black placeholder:text-brand-darkgray focus:outline-none focus:border-brand-orange transition-colors resize-none" placeholder="Beskriv prosjektet ditt kort..." />
+      </div>
+
+      {/* File upload */}
+      <div>
+        <label className="block text-sm font-bold text-brand-black mb-1.5">
+          Vedlegg <span className="font-normal text-brand-darkgray">(valgfritt — tegninger, bilder, PDF)</span>
+        </label>
+        <button
+          type="button"
+          onClick={() => fileInputRef.current?.click()}
+          disabled={files.length >= MAX_FILES}
+          className="w-full flex items-center justify-center gap-3 px-4 py-4 border-2 border-dashed border-brand-gray rounded-[10px] text-brand-darkgray hover:border-brand-orange hover:text-brand-orange transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
+        >
+          <Upload size={18} />
+          <span className="text-sm">Velg filer eller slipp dem her</span>
+        </button>
+        <input
+          ref={fileInputRef}
+          type="file"
+          multiple
+          accept={ACCEPTED}
+          className="hidden"
+          onChange={(e) => addFiles(e.target.files)}
+          onClick={(e) => { (e.target as HTMLInputElement).value = '' }}
+        />
+        <p className="text-brand-darkgray text-xs mt-1.5">
+          PDF, JPG, PNG, DWG, DXF — maks {MAX_FILE_MB} MB per fil, opptil {MAX_FILES} filer
+        </p>
+
+        {files.length > 0 && (
+          <ul className="mt-3 space-y-2">
+            {files.map((f, i) => (
+              <li key={i} className="flex items-center justify-between gap-3 px-3 py-2 bg-brand-lightgray rounded-[8px] border border-brand-gray">
+                <div className="flex items-center gap-2 min-w-0">
+                  <Paperclip size={14} className="text-brand-orange shrink-0" />
+                  <span className="text-sm text-brand-black truncate">{f.name}</span>
+                  <span className="text-xs text-brand-darkgray shrink-0">{formatSize(f.size)}</span>
+                </div>
+                <button type="button" onClick={() => removeFile(i)} className="shrink-0 text-brand-darkgray hover:text-red-500 transition-colors">
+                  <X size={16} />
+                </button>
+              </li>
+            ))}
+          </ul>
+        )}
+
+        {fileError && <p className="text-red-600 text-sm mt-2">{fileError}</p>}
       </div>
 
       {status === 'error' && (
