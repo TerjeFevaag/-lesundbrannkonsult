@@ -50,21 +50,22 @@ const services = [
 
 const reviews = [
   {
-    quote: 'Raskt svar, relevant og grundig rapport, kommunen likte måten det var gjort på. Alt til bra priser.',
-    author: 'Vegard Hals',
+    quote: 'Godt fornøyd med bistand — kjapp og konstruktiv, samt at det er foretatt en god balanse mellom krav og praktiske løsninger.',
+    author: 'Øyvind Hamre',
   },
   {
-    quote: 'Brannkonsult AS er faglig dyktige, ryddige og løsningsorienterte. Det er viktig for oss som arkitekter og for våre kunder.',
-    author: 'Jon Cederbrand Arkitektur AS',
+    quote: 'Raske svar, ingen spørsmål er for små eller dumme, veldig hyggelige. Står frem som et meget seriøst firma med veldig god kompetanse i faget.',
+    author: 'The Wagonshed Project AS',
+    company: 'Kjetil Iversen',
   },
   {
-    quote: 'Ålesund Brannkonsult er lette å samarbeide med, de svarer raskt, finner gode løsninger og leverer arbeid av jevnt høy kvalitet.',
-    author: 'Hagelin Byggservice',
-    company: 'Daniel Hagelin',
+    quote: 'God dialog, kunnskapsrik og løsningsorientert.',
+    author: 'Tegneriet AS',
+    company: 'Pål R. Løvik',
   },
   {
-    quote: 'Ga rask tilbakemelding ved første kontakt. Leverte til avtalt tid og pris. Høy kvalitet på arbeidet. Veldig behjelpelig med å svare på spørsmål i ettertid, vederlagsfritt.',
-    author: 'Jonathan Steinsvik',
+    quote: 'Leverte helt i henhold til plan, og hadde god kommunikasjon hele veien.',
+    author: 'Eskil Wilhelmsen',
   },
 ]
 
