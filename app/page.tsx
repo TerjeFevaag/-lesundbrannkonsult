@@ -3,11 +3,11 @@ import Image from 'next/image'
 
 export const metadata: Metadata = {
   title: 'Brannprosjektering i Ålesund | Brannkonsult AS',
-  description: 'Sentralt godkjent brannrådgiver med over 1 200 prosjekter. Brannkonsept, brannprosjektering og branninspeksjon i Ålesund, Sunnmøre og hele Norge. Fastpris alltid.',
+  description: 'Sentralt godkjent brannrådgiver med over 1 000 prosjekter. Brannkonsept, brannprosjektering og branninspeksjon i Ålesund, Sunnmøre og hele Norge. Fastpris alltid.',
   alternates: { canonical: 'https://www.ålesundbrannkonsult.no' },
   openGraph: {
     title: 'Brannprosjektering i Ålesund | Brannkonsult AS',
-    description: 'Sentralt godkjent brannrådgiver med over 1 200 prosjekter. Brannkonsept, brannprosjektering og branninspeksjon i Ålesund, Sunnmøre og hele Norge.',
+    description: 'Sentralt godkjent brannrådgiver med over 1 000 prosjekter. Brannkonsept, brannprosjektering og branninspeksjon i Ålesund, Sunnmøre og hele Norge.',
     url: 'https://www.ålesundbrannkonsult.no',
     siteName: 'Brannkonsult AS',
     locale: 'nb_NO',
@@ -126,7 +126,7 @@ export default function HomePage() {
               Din brannrådgiver i Ålesund
             </h1>
             <p className="hero-3 text-brand-white/70 text-base lg:text-lg leading-relaxed mb-7">
-              Over 1 200 prosjekter. Brannkonsept, brannprosjektering og branninspeksjon for private, arkitekter og utbyggere — i Ålesund og over hele landet.
+              Over 1 000 prosjekter. Brannkonsept, brannprosjektering og branninspeksjon for private, arkitekter og utbyggere — i Ålesund og over hele landet.
             </p>
             <div className="hero-4 flex flex-col sm:flex-row gap-3">
               <Link href="/kontakt-oss" className="bg-brand-orange text-brand-white font-bold px-8 py-3.5 rounded-[10px] hover:opacity-90 transition-opacity text-center">

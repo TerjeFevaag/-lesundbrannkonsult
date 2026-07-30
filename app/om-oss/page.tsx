@@ -68,7 +68,7 @@ export default function OmOssPage() {
           {/* Stats */}
           <ScrollReveal>
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
-              {[{ number: '2013', label: 'Etablert' }, { number: '1200+', label: 'Prosjekter' }, { number: 'TKL 1+2', label: 'Sentralt godkjent' }, { number: '5', label: 'Brannrådgivere' }].map((stat, i) => (
+              {[{ number: '2013', label: 'Etablert' }, { number: '1000+', label: 'Prosjekter' }, { number: 'TKL 1+2', label: 'Sentralt godkjent' }, { number: '5', label: 'Brannrådgivere' }].map((stat, i) => (
                 <div key={i} className="bg-brand-dark rounded-[20px] p-6 text-center">
                   <div className="text-brand-orange font-black text-3xl mb-2">{stat.number}</div>
                   <div className="text-brand-white text-sm font-bold">{stat.label}</div>
