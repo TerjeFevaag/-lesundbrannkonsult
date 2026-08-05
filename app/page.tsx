@@ -59,13 +59,12 @@ const reviews = [
     company: 'Kjetil Iversen',
   },
   {
-    quote: 'God dialog, kunnskapsrik og løsningsorientert.',
-    author: 'Tegneriet AS',
-    company: 'Pål R. Løvik',
+    quote: 'Enkel og grei å jobbe med, fant gode konsepter sammen uten å dreie mot kompliserte og kostbare løsninger.',
+    author: 'Einar Lundgaard',
   },
   {
-    quote: 'Leverte helt i henhold til plan, og hadde god kommunikasjon hele veien.',
-    author: 'Eskil Wilhelmsen',
+    quote: 'Hadde på forhånd vært i kontakt med andre eksperter som kom opp med mye mer omfattende løsninger. Alt i alt superfornøyd både med notatet og kommunikasjon med rådgiver.',
+    author: 'Kjell Lauritsen',
   },
 ]
 
