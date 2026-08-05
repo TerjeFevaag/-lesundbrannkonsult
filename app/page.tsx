@@ -50,21 +50,21 @@ const services = [
 
 const reviews = [
   {
-    quote: 'Godt fornøyd med bistand — kjapp og konstruktiv, samt at det er foretatt en god balanse mellom krav og praktiske løsninger.',
+    quote: 'Raske og effektive, hyggelige, gode kontakter andre tjenester innenfor samme fagområde.',
     author: 'Øyvind Hamre',
   },
   {
-    quote: 'Raske svar, ingen spørsmål er for små eller dumme, veldig hyggelige. Står frem som et meget seriøst firma med veldig god kompetanse i faget.',
+    quote: 'Brannkonsult AS er faglig dyktige, ryddige og løsningsorienterte. Det er viktig for oss som arkitekter og for våre kunder.',
     author: 'The Wagonshed Project AS',
     company: 'Kjetil Iversen',
   },
   {
-    quote: 'God dialog, kunnskapsrik og løsningsorientert.',
+    quote: 'Rask, nøye og god service!',
     author: 'Tegneriet AS',
     company: 'Pål R. Løvik',
   },
   {
-    quote: 'Leverte helt i henhold til plan, og hadde god kommunikasjon hele veien.',
+    quote: 'Veldig fornøyd! God kommunikasjon og raskt og grundig utført.',
     author: 'Eskil Wilhelmsen',
   },
 ]
