@@ -1,6 +1,10 @@
 import { NextResponse } from 'next/server'
 import { MailerSend, EmailParams, Sender, Recipient } from 'mailersend'
 
+function escapeHtml(s: string): string { return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;') }
+
+const BLOB_HOST = /^https:\/\/[a-z0-9]+\.public\.blob\.vercel-storage\.com\//
+
 const mailerSend = new MailerSend({
   apiKey: process.env.MAILERSEND_API_TOKEN!,
 })
@@ -13,11 +17,23 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: 'Mangler påkrevde felter' }, { status: 400 })
     }
 
-    const vedleggListe: { name: string; url: string; size: number }[] = vedlegg ?? []
+    if (navn.length > 200 || epost.length > 200 || melding.length > 10000) {
+      return NextResponse.json({ error: 'Felt er for lange' }, { status: 400 })
+    }
+
+    const vedleggRaw: { name: string; url: string; size: number }[] = vedlegg ?? []
+
+    for (const f of vedleggRaw) {
+      if (!BLOB_HOST.test(f.url)) {
+        return NextResponse.json({ error: 'Ugyldig vedlegg-URL' }, { status: 400 })
+      }
+    }
+
+    const vedleggListe = vedleggRaw.slice(0, 4)
 
     const vedleggHtml = vedleggListe.length > 0
       ? `<tr><td><strong>Vedlegg</strong></td><td>${vedleggListe.map(
-          (f) => `<a href="${f.url}">${f.name}</a> (${(f.size / 1024).toFixed(0)} KB)`
+          (f) => `<a href="${escapeHtml(f.url)}">${escapeHtml(f.name)}</a> (${(f.size / 1024).toFixed(0)} KB)`
         ).join('<br>')}</td></tr>`
       : ''
 
@@ -36,11 +52,11 @@ export async function POST(request: Request) {
       .setHtml(`
         <h2>Ny henvendelse fra nettskjema</h2>
         <table cellpadding="8" style="border-collapse:collapse;width:100%;max-width:600px">
-          <tr><td><strong>Navn</strong></td><td>${navn}</td></tr>
-          <tr><td><strong>E-post</strong></td><td><a href="mailto:${epost}">${epost}</a></td></tr>
-          ${telefon ? `<tr><td><strong>Telefon</strong></td><td>${telefon}</td></tr>` : ''}
-          ${prosjekttype ? `<tr><td><strong>Prosjekttype</strong></td><td>${prosjekttype}</td></tr>` : ''}
-          <tr><td><strong>Melding</strong></td><td style="white-space:pre-wrap">${melding}</td></tr>
+          <tr><td><strong>Navn</strong></td><td>${escapeHtml(navn)}</td></tr>
+          <tr><td><strong>E-post</strong></td><td><a href="mailto:${escapeHtml(epost)}">${escapeHtml(epost)}</a></td></tr>
+          ${telefon ? `<tr><td><strong>Telefon</strong></td><td>${escapeHtml(telefon)}</td></tr>` : ''}
+          ${prosjekttype ? `<tr><td><strong>Prosjekttype</strong></td><td>${escapeHtml(prosjekttype)}</td></tr>` : ''}
+          <tr><td><strong>Melding</strong></td><td style="white-space:pre-wrap">${escapeHtml(melding)}</td></tr>
           ${vedleggHtml}
         </table>
       `)
